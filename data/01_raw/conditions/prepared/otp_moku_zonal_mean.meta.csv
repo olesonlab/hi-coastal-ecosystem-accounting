@@ -1,0 +1,2 @@
+aggregation,na_rm,otp_dir
+mean_of_raster_cells_intersecting_moku_polygon,TRUE,data/01_raw/conditions/source/otp

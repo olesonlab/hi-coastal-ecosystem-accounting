@@ -271,52 +271,243 @@ a:hover, a:focus {
 
 // Controlbar Styling
 .control-sidebar {
-  width: 300px !important;
+  width: 380px !important;
+  padding: 16px 16px 20px !important;
+  --filters-space-1: 8px;
+  --filters-space-2: 12px;
+  --filters-space-3: 18px;
+  --filters-space-4: 22px;
+  --filters-space-5: 28px;
+  --filters-radius: 12px;
+  --filters-border: #d5deea;
+  --filters-text: #1f2d3b;
+  --filters-muted: #576b7f;
+  --filters-primary: #1d70b8;
+  --filters-primary-hover: #15598f;
+  --filters-focus: rgba(29, 112, 184, 0.25);
+}
+
+.control-sidebar .control-sidebar-content,
+.control-sidebar .tab-content {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.control-sidebar .filters-panel {
+  background: #ffffff;
+  border: 1px solid var(--filters-border);
+  border-radius: var(--filters-radius);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  padding: var(--filters-space-4);
+  margin: 0 0 var(--filters-space-3) 0;
+}
+
+.control-sidebar .filters-help {
+  font-size: 0.88rem;
+  color: var(--filters-muted);
+  margin: 0 0 var(--filters-space-2) 0;
+  line-height: 1.45;
+}
+
+.control-sidebar .filters-disclosure {
+  border: 1px solid #e2eaf2;
+  border-radius: 10px;
+  background: #fbfdff;
+  margin-bottom: var(--filters-space-2);
+  overflow: hidden;
+}
+
+.control-sidebar .filters-disclosure-body {
+  padding: 14px;
+}
+
+.control-sidebar .accordion {
+  --bs-accordion-border-color: #e2eaf2;
+  --bs-accordion-border-radius: 10px;
+  --bs-accordion-btn-padding-x: 14px;
+  --bs-accordion-btn-padding-y: 12px;
+  --bs-accordion-btn-color: #1f2d3b;
+  --bs-accordion-active-color: #0f3b64;
+  --bs-accordion-active-bg: #f5f9ff;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 3px var(--filters-focus);
+}
+
+.control-sidebar .accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: var(--filters-space-2);
+}
+
+.control-sidebar .accordion-button {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.control-sidebar .accordion-body {
+  padding: 0;
 }
 
 .control-sidebar .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: var(--filters-space-3);
+  text-align: left;
+  align-items: stretch;
+  width: 100%;
 }
 
-/* Center filter controls in the controlbar */
-.control-sidebar .form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; // centers the label text
+.control-sidebar .form-group > label,
+.control-sidebar .control-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--filters-text);
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
 }
 
-/* Center the actual inputs (works for plain selects + selectize) */
 .control-sidebar .form-group .form-control,
 .control-sidebar .form-group .selectize-control {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;      // pick what you want
-  max-width: 280px; // optional: keeps it from getting too wide
-}
-
-/* Make the selectize input itself centered (text + caret area) */
-.control-sidebar .selectize-input {
-  text-align: center;
-}
-
-// Apply Filters button styling
-.btn-olive {
-  background-color: #6c8e23;
-  border-color: #6c8e23;
-  color: #fff;
-  margin-top: 1rem;
-}
-
-.btn-olive:hover,
-.btn-olive:focus {
-  background-color: #5a7a1d;
-  border-color: #5a7a1d;
-  color: #fff;
-}
-
-.btn-block {
   width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.control-sidebar .selectize-input,
+.control-sidebar .form-control {
+  border-radius: 10px;
+  border: 1px solid #bfcddd;
+  min-height: 46px;
+  padding: 10px 14px;
+  font-size: 1.05rem;
+  color: var(--filters-text);
+  text-align: left;
+  background: #fff;
+}
+
+.control-sidebar .selectize-control.single .selectize-input:after {
+  right: 14px;
+  border-width: 6px 5px 0;
+}
+
+.control-sidebar .selectize-dropdown {
+  border: 1px solid #bfcddd;
+  border-radius: 10px;
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.14);
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.control-sidebar .selectize-dropdown .option {
+  padding: 12px 14px;
+  font-size: 0.98rem;
+}
+
+.control-sidebar .selectize-dropdown .active {
+  background-color: #ebf4ff;
+  color: #0f3b64;
+}
+
+.control-sidebar .shiny-options-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.control-sidebar .radio-inline {
+  margin-right: 0;
+  padding: 10px 14px;
+  border: 1px solid #d7e0ea;
+  border-radius: 999px;
+  background: #f7fafc;
+  color: #2f3f4f;
+  font-size: 0.9rem;
+}
+
+.control-sidebar .selectize-input.focus,
+.control-sidebar .selectize-input:focus,
+.control-sidebar .form-control:focus,
+.control-sidebar .btn:focus,
+.control-sidebar .btn:focus-visible {
+  border-color: var(--filters-primary) !important;
+  box-shadow: 0 0 0 3px var(--filters-focus) !important;
+  outline: none;
+}
+
+.control-sidebar .filters-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--filters-space-2);
+  margin-top: var(--filters-space-3);
+  padding-top: var(--filters-space-3);
+  border-top: 1px solid #e6edf5;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  z-index: 3;
+}
+
+.control-sidebar .filters-actions .btn {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.control-sidebar .btn-apply-filters {
+  width: 100%;
+  background-color: var(--filters-primary) !important;
+  border-color: var(--filters-primary) !important;
+  color: #fff !important;
+  font-weight: 600;
+  min-height: 46px;
+  font-size: 1rem;
+}
+
+.control-sidebar .btn-apply-filters:hover,
+.control-sidebar .btn-apply-filters:focus {
+  background-color: var(--filters-primary-hover) !important;
+  border-color: var(--filters-primary-hover) !important;
+}
+
+.control-sidebar .btn-reset-filters {
+  width: 100%;
+  background-color: #fff !important;
+  border: 1px solid #c9d4df !important;
+  color: #344250 !important;
+  font-weight: 600;
+  min-height: 42px;
+  font-size: 0.95rem;
+}
+
+.control-sidebar .btn:disabled,
+.control-sidebar .btn.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.control-sidebar .form-control[disabled],
+.control-sidebar .selectize-control.disabled .selectize-input {
+  background-color: #f4f7fa;
+  color: #708090;
+}
+
+@media (max-width: 992px) {
+  .control-sidebar {
+    width: 100% !important;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .control-sidebar {
+    padding: 10px !important;
+  }
+
+  .control-sidebar .filters-panel {
+    padding: 14px;
+  }
+
+  .control-sidebar .form-group > label,
+  .control-sidebar .control-label {
+    font-size: 0.9rem;
+  }
 }
 
 // ===========================================
@@ -454,8 +645,8 @@ a:hover, a:focus {
   border-top: 1px solid #e9ecef !important;
 }
 
-// Apply Filters Button
-.control-sidebar .btn-apply-filters {
+// Apply Filters Button (fisheries panel only)
+.control-sidebar .fisheries-filters-panel .btn-apply-filters {
   background-color: #1D70B8 !important;
   border: none !important;
   color: #fff !important;
@@ -469,15 +660,15 @@ a:hover, a:focus {
   display: block !important;
 }
 
-.control-sidebar .btn-apply-filters:hover,
-.control-sidebar .btn-apply-filters:focus {
+.control-sidebar .fisheries-filters-panel .btn-apply-filters:hover,
+.control-sidebar .fisheries-filters-panel .btn-apply-filters:focus {
   background-color: #155a8a !important;
   color: #fff !important;
   box-shadow: 0 4px 8px rgba(29, 112, 184, 0.4) !important;
 }
 
-// Reset All Button
-.control-sidebar .btn-reset-filters {
+// Reset All Button (fisheries panel only)
+.control-sidebar .fisheries-filters-panel .btn-reset-filters {
   background-color: transparent !important;
   border: 1px solid #dee2e6 !important;
   color: #6c757d !important;
@@ -491,8 +682,8 @@ a:hover, a:focus {
   display: block !important;
 }
 
-.control-sidebar .btn-reset-filters:hover,
-.control-sidebar .btn-reset-filters:focus {
+.control-sidebar .fisheries-filters-panel .btn-reset-filters:hover,
+.control-sidebar .fisheries-filters-panel .btn-reset-filters:focus {
   background-color: #f8f9fa !important;
   border-color: #adb5bd !important;
   color: #495057 !important;

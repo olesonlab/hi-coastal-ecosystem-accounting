@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Hawaiʻi Coastal Ecosystem Accounting"
+  description: "Natural capital accounts for the Main Hawaiian Islands — Pew Marine Fellowship"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: extents_conditions.qmd
+        text: "Extents & Conditions"
+      - href: fisheries.qmd
+        text: Fisheries
+    right:
+      - icon: github
+        href: https://github.com/olesonlab
+  page-footer:
+    center: |
+      Oleson Lab, University of Hawaiʻi at Mānoa &nbsp;|&nbsp; Pew Marine Fellowship
+    background: light
+
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    embed-resources: true
+    fig-align: center
+    fig-cap-location: bottom
+
+execute:
+  warning: false
+  message: false
+  echo: false

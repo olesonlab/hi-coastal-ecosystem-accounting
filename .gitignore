@@ -2,6 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
 
 # renv settings
 renv/library/ 
@@ -10,4 +14,15 @@ renv/cache/
 
 R/_utils
 documentation/trash/
-notebooks/ignore/
+notebooks/
+**/source/
+**/trash/
+**/_archive/
+**/_reference/
+~WRL2715.tmp
+documentation/demos/fisheries_dashboard_demo.mp4
+.claude/
+.cursor/
+.posit/
+.rhino/
+tests/

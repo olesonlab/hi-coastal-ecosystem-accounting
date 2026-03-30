@@ -13,15 +13,11 @@
 HOME = "home"
 EXTENTS = "extents"
 CONDITIONS = "conditions"
-USES_FISHERIES_VALUATION = "uses_fisheries_valuation"
-USES_RECREATION = "uses_recreation"
 
-SCOPES = c(EXTENTS, CONDITIONS, USES_FISHERIES_VALUATION, USES_RECREATION)
+SCOPES = c(EXTENTS, CONDITIONS)
 
 SCOPE_LABELS = c(
   home = "Home",
   extents = "Extents",
-  conditions = "Conditions",
-  uses_fisheries_valuation = "Uses > Fisheries Valuation",
-  uses_recreation = "Uses > Recreation"
+  conditions = "Conditions"
 )

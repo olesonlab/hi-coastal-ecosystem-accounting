@@ -80,6 +80,55 @@ ui <- function(id) {
             hr(),
 
             h4("Key Features"),
+            div(
+              class = "metric-row",
+              style = "display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px; margin-bottom: 12px;",
+              div(
+                style = "flex: 1 1 320px;",
+                div(
+                  class = "metric-box moku-metric-box",
+                  style = "min-height: 110px; padding: 14px 18px;",
+                  tags$span(
+                    class = "info-icon",
+                    icon("info-circle"),
+                    `data-toggle` = "tooltip",
+                    `data-placement` = "top",
+                    title = paste(
+                      "The Moku system (districts) is a biocultural resource",
+                      "management system based on Hawaiian social-ecological",
+                      "regions and communities. Their boundaries are used as",
+                      "Ecosystem Accounting Areas (EAA), accounting units for the",
+                      "SEEA EA framework."
+                    )
+                  ),
+                  div(class = "metric-value", style = "font-size: 40px; line-height: 1.1;", "43"),
+                  div(class = "metric-label", "Mokus Analyzed")
+                )
+              ),
+              div(
+                style = "flex: 1 1 320px;",
+                div(
+                  class = "metric-box et-metric-box",
+                  style = "min-height: 110px; padding: 14px 18px;",
+                  tags$span(
+                    class = "info-icon",
+                    icon("info-circle"),
+                    `data-toggle` = "tooltip",
+                    `data-placement` = "top",
+                    title = paste(
+                      "An ecosystem type is a distinct ecosystem functional group",
+                      "with its unique combination of abiotic and biotic components",
+                      "and interactions. Marine types include coral, seagrass, and",
+                      "open ocean. Terrestrial types include forest, shrubland, and",
+                      "developed areas."
+                    )
+                  ),
+                  div(class = "metric-value", style = "font-size: 40px; line-height: 1.1;", "14"),
+                  div(class = "metric-label", "Ecosystem Types")
+                )
+              )
+            ),
+
             tags$ul(
               tags$li(
                 strong("Ecosystem Extents:"),
@@ -88,21 +137,13 @@ ui <- function(id) {
               tags$li(
                 strong("Condition Indicators:"),
                 " Monitor environmental conditions like rainfall and vegetation health."
-              ),
-              tags$li(
-                strong("Fisheries Valuation:"),
-                " Explore the economic value of commercial and non-commercial fisheries at island and moku scales."
-              ),
-              tags$li(
-                strong("Recreation Services:"),
-                " Analyze trends in recreation, visitation, and ecosystem service use."
               )
             ),
 
             h4("How to Use This Dashboard"),
             tags$ol(
               tags$li(
-                "Use the navigation menu on the left to select a topic area (e.g., Fisheries Valuation)."
+                "Use the navigation menu on the left to select a topic area."
               ),
               tags$li(
                 "Apply filters in the right sidebar to customize maps, tables, and charts by island, moku, ecosystem, year, and more."
@@ -116,147 +157,137 @@ ui <- function(id) {
                 " icon within a value box, hover over it to learn more information."
               )
             ),
-
-            hr(),
-
-            # Data Sources Section
-            p(
-              class = "about-our-project-notes",
-              tagList(
-                "Data sources: State of Hawai\u02bbi, NOAA, research partners. For questions or feedback, please contact the project team."
-              )
-            )
           )
         )
       )
     ),
 
     #–––––––––––––––––––––––––––––––––––––––––––––––––
-    # Team Profile Cards Section
+    # Team Profile Cards Section (hidden for now)
     #–––––––––––––––––––––––––––––––––––––––––––––––––
-    div(
-      class = "team-profiles-section",
+    # div(
+    #   class = "team-profiles-section",
 
-      # Kirsten's Card
-      div(
-        class = "team-profiles-single-card",
-        img(
-          class = "team-profiles-headshot",
-          src = "static/img/2023_kirsten_oleson_headshot.png"
-        ),
-        h5("Kirsten L.L. Oleson"),
-        p(
-          class = "team-profiles-role",
-          "Title"
-        ),
-        p(
-          class = "team-profiles-affiliation",
-          "University of Hawai\u02bbi at M\u0101noa"
-        ),
-        a(
-          class = "team-profiles-email",
-          href = "mailto:koleson@hawaii.edu",
-          icon("envelope"),
-          " Email"
-        )
-      ),
+    #   # Kirsten's Card
+    #   div(
+    #     class = "team-profiles-single-card",
+    #     img(
+    #       class = "team-profiles-headshot",
+    #       src = "static/img/2023_kirsten_oleson_headshot.png"
+    #     ),
+    #     h5("Kirsten L.L. Oleson"),
+    #     p(
+    #       class = "team-profiles-role",
+    #       "Title"
+    #     ),
+    #     p(
+    #       class = "team-profiles-affiliation",
+    #       "University of Hawai\u02bbi at M\u0101noa"
+    #     ),
+    #     a(
+    #       class = "team-profiles-email",
+    #       href = "mailto:koleson@hawaii.edu",
+    #       icon("envelope"),
+    #       " Email"
+    #     )
+    #   ),
 
-      # Louis's Card
-      div(
-        class = "team-profiles-single-card",
-        img(
-          class = "team-profiles-headshot",
-          src = "static/img/2023_louis_chua_heashot.png"
-        ),
-        h5("Louis Chua"),
-        p(
-          class = "team-profiles-role",
-          "Title"
-        ),
-        p(
-          class = "team-profiles-affiliation",
-          "University of Hawai\u02bbi at M\u0101noa"
-        ),
-        a(
-          class = "team-profiles-email",
-          href = "mailto:",
-          icon("envelope"),
-          " Email"
-        )
-      ),
+    #   # Louis's Card
+    #   div(
+    #     class = "team-profiles-single-card",
+    #     img(
+    #       class = "team-profiles-headshot",
+    #       src = "static/img/2023_louis_chua_heashot.png"
+    #     ),
+    #     h5("Louis Chua"),
+    #     p(
+    #       class = "team-profiles-role",
+    #       "Title"
+    #     ),
+    #     p(
+    #       class = "team-profiles-affiliation",
+    #       "University of Hawai\u02bbi at M\u0101noa"
+    #     ),
+    #     a(
+    #       class = "team-profiles-email",
+    #       href = "mailto:",
+    #       icon("envelope"),
+    #       " Email"
+    #     )
+    #   ),
 
-      # Ela's Card
-      div(
-        class = "team-profiles-single-card",
-        img(
-          class = "team-profiles-headshot",
-          src = "static/img/2023_ela_ural_headshot.png"
-        ),
-        h5("Ela Ural"),
-        p(
-          class = "team-profiles-role",
-          "Title"
-        ),
-        p(
-          class = "team-profiles-affiliation",
-          "University of Hawai\u02bbi at M\u0101noa"
-        ),
-        a(
-          class = "team-profiles-email",
-          href = "mailto:",
-          icon("envelope"),
-          " Email"
-        )
-      ),
+    #   # Ela's Card
+    #   div(
+    #     class = "team-profiles-single-card",
+    #     img(
+    #       class = "team-profiles-headshot",
+    #       src = "static/img/2023_ela_ural_headshot.png"
+    #     ),
+    #     h5("Ela Ural"),
+    #     p(
+    #       class = "team-profiles-role",
+    #       "Title"
+    #     ),
+    #     p(
+    #       class = "team-profiles-affiliation",
+    #       "University of Hawai\u02bbi at M\u0101noa"
+    #     ),
+    #     a(
+    #       class = "team-profiles-email",
+    #       href = "mailto:",
+    #       icon("envelope"),
+    #       " Email"
+    #     )
+    #   ),
 
-      # Ashley's Card
-      div(
-        class = "team-profiles-single-card",
-        img(
-          class = "team-profiles-headshot",
-          src = "static/img/2025_ashley_lowe_mackenzie_headshot.png"
-        ),
-        h5("Ashley Lowe Mackenzie"),
-        p(
-          class = "team-profiles-role",
-          "Title"
-        ),
-        p(
-          class = "team-profiles-affiliation",
-          "University of Hawai\u02bbi at M\u0101noa"
-        ),
-        a(
-          class = "team-profiles-email",
-          href = "mailto:",
-          icon("envelope"),
-          " Email"
-        )
-      ),
+    #   # Ashley's Card
+    #   div(
+    #     class = "team-profiles-single-card",
+    #     img(
+    #       class = "team-profiles-headshot",
+    #       src = "static/img/2025_ashley_lowe_mackenzie_headshot.png"
+    #     ),
+    #     h5("Ashley Lowe Mackenzie"),
+    #     p(
+    #       class = "team-profiles-role",
+    #       "Title"
+    #     ),
+    #     p(
+    #       class = "team-profiles-affiliation",
+    #       "University of Hawai\u02bbi at M\u0101noa"
+    #     ),
+    #     a(
+    #       class = "team-profiles-email",
+    #       href = "mailto:",
+    #       icon("envelope"),
+    #       " Email"
+    #     )
+    #   ),
 
-      # Alemarie's Card
-      div(
-        class = "team-profiles-single-card",
-        img(
-          class = "team-profiles-headshot",
-          src = "static/img/2023_alemarie_ceria_headshot.png"
-        ),
-        h5("Alemarie Ceria"),
-        p(
-          class = "team-profiles-role",
-          "Title"
-        ),
-        p(
-          class = "team-profiles-affiliation",
-          "University of Hawai\u02bbi at M\u0101noa"
-        ),
-        a(
-          class = "team-profiles-email",
-          href = "mailto:",
-          icon("envelope"),
-          " Email"
-        )
-      )
-    )
+    #   # Alemarie's Card
+    #   div(
+    #     class = "team-profiles-single-card",
+    #     img(
+    #       class = "team-profiles-headshot",
+    #       src = "static/img/2023_alemarie_ceria_headshot.png"
+    #     ),
+    #     h5("Alemarie Ceria"),
+    #     p(
+    #       class = "team-profiles-role",
+    #       "Title"
+    #     ),
+    #     p(
+    #       class = "team-profiles-affiliation",
+    #       "University of Hawai\u02bbi at M\u0101noa"
+    #     ),
+    #     a(
+    #       class = "team-profiles-email",
+    #       href = "mailto:",
+    #       icon("envelope"),
+    #       " Email"
+    #     )
+    #   )
+    # )
   )
 }
 

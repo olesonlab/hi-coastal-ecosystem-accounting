@@ -11,13 +11,6 @@
 # - Use shiny:: for reactive primitives (reactiveValues, observeEvent, req, renderUI, etc.).
 # - Use box::use() for imports; do not use library().
 
-# Current status
-# - Data loading from targets pipeline.
-# - Global filters (Island, Moku, Year) with cascading.
-# - Extents-specific filters (Realm, Ecosystem Type).
-# - Filtered data reactives passed to page modules.
-# - Filter values use `island`/`moku` columns, display uses `island_olelo`/`moku_olelo`.
-
 # Imports
 box::use(
   shiny[
@@ -33,28 +26,26 @@ box::use(
     div,
     updateSelectInput
   ],
-  dplyr[filter]
+  dplyr[filter, distinct, arrange],
+  stats[setNames],
+  jsonlite[toJSON]
 )
 
 # Modules
 box::use(
-  app/view/layout/nav_model[
-    HOME,
-    CONDITIONS,
-    EXTENTS,
-    USES_FISHERIES_VALUATION,
-    USES_RECREATION
-  ],
+  app/view/layout/nav_model[HOME, CONDITIONS, EXTENTS],
   app/view/layout/dashboard_shell,
   app/view/layout/nav,
   app/view/controls/controls_global,
   app/view/controls/controls_extents,
   app/view/controls/controls_conditions,
-  app/view/controls/controls_uses_fisheries_valuation,
-  app/view/controls/controls_uses_recreation,
   app/view/tabs/extents/extents_page,
+  app/view/tabs/conditions/conditions_page,
   app/logic/routing_spec,
-  app/logic/data_loader
+  app/logic/data_loader,
+  app/logic/extents_summaries,
+  app/logic/conditions_summaries,
+  app/logic/conditions_metadata
 )
 
 #' @export
@@ -73,36 +64,78 @@ ui <- function(id) {
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
+    .AGENT_LOG_PATH <- "F:/projects/oleson_lab_projects/projects/current/hi-coastal-ecosystem-accounting/debug-2c6332.log"
+    .agent_log <- function(hypothesisId, message, data = list(), runId = "pre-fix-1") {
+      payload <- list(
+        sessionId = "2c6332",
+        runId = runId,
+        hypothesisId = hypothesisId,
+        location = "app/main.R",
+        message = message,
+        data = data,
+        timestamp = as.numeric(Sys.time()) * 1000
+      )
+      cat(
+        paste0(jsonlite::toJSON(payload, auto_unbox = TRUE, null = "null"), "\n"),
+        file = .AGENT_LOG_PATH,
+        append = TRUE
+      )
+    }
 
     ########################
     # Data Loading
     ########################
 
-    # Load data once at startup
-    extents_sf <- data_loader$load_extents_sf()
-    extents_df <- data_loader$load_extents_df()
+    # Extents data
+    extents_sf     <- data_loader$load_extents_sf()
+    extents_df     <- data_loader$load_extents_df()
     filter_choices <- data_loader$get_filter_choices(extents_df)
+    moku_names_lut <- data_loader$load_moku_names_lut()
 
-    # Load fisheries data
-    fisheries_comm <- data_loader$load_fisheries_commercial()
-    fisheries_noncomm <- data_loader$load_fisheries_noncommercial()
-    fisheries_filter_choices <- data_loader$get_fisheries_filter_choices(fisheries_comm, fisheries_noncomm)
+    # Conditions data
+    conditions_df  <- data_loader$load_conditions_df()
+    moku_sf        <- data_loader$load_moku_sf()
+    conditions_filter_choices <- data_loader$get_conditions_filter_choices(conditions_df)
+
+    conditions_island_choices <- {
+      island_lookup <- conditions_df |>
+        distinct(island, island_olelo) |>
+        filter(!is.na(island), nzchar(island)) |>
+        arrange(island_olelo)
+      setNames(island_lookup$island, island_lookup$island_olelo)
+    }
+    conditions_moku_choices <- stats::setNames(character(0), character(0))
 
     ########################
     # State
     ########################
 
+    default_cond_category <- if ("Marine Abiotic" %in% conditions_filter_choices$categories) "Marine Abiotic" else conditions_filter_choices$categories[[1]]
+    default_cond_indicator <- {
+      candidates <- c("SST", "kd490")
+      inds <- data_loader$get_indicators_for_category(conditions_df, default_cond_category)
+      hit <- candidates[candidates %in% inds]
+      if (length(hit) > 0) hit[[1]] else inds[[1]]
+    }
+
     state <- reactiveValues(
-      # Navigation
       nav_scope = HOME,
 
-      # Applied filter values (updated on "Apply Filters" click)
-      # These use the filter key columns (island, moku), not the display columns (olelo)
-      applied_island = filter_choices$islands[1],
-      applied_moku = filter_choices$mokus[1],
-      applied_year = max(filter_choices$years),
-      applied_realm = filter_choices$realms[1],
-      applied_ecosystem_type = filter_choices$ecosystem_types[1]
+      # Extents applied filter values
+      applied_island          = filter_choices$islands[[1]],
+      applied_moku            = "",
+      applied_realm           = "All",
+      applied_ecosystem_type  = filter_choices$ecosystem_types[[1]],
+      applied_year_a          = min(filter_choices$years),
+      applied_year_b          = max(filter_choices$years),
+
+      # Conditions applied filter values
+      applied_cond_island    = "",
+      applied_cond_moku      = "",
+      applied_cond_category  = default_cond_category,
+      applied_cond_indicator = default_cond_indicator,
+      applied_cond_mode      = "value",
+      applied_cond_year      = max(conditions_filter_choices$years)
     )
 
     ########################
@@ -117,99 +150,369 @@ server <- function(id) {
     })
 
     ########################
-    # Global Controls Server
-    ########################
-
-    global_inputs <- controls_global$server("controls_global", extents_df)
-
-    # Cascade: Update moku choices when island changes
-    observeEvent(global_inputs$island(), {
-      new_mokus <- data_loader$get_mokus_for_island(extents_df, global_inputs$island())
-      updateSelectInput(
-        session,
-        inputId = "controls_global-moku",
-        choices = new_mokus,
-        selected = new_mokus[1]
-      )
-    })
-
-    ########################
     # Extents Controls Server
     ########################
 
     extents_inputs <- controls_extents$server("controls_extents")
 
-    # Cascade: Update ecosystem type choices when realm changes
-    observeEvent(extents_inputs$realm(), {
-      new_types <- data_loader$get_ecosystem_types_for_realm(extents_df, extents_inputs$realm())
+    observeEvent(extents_inputs$island(), {
+      island_val <- extents_inputs$island()
+      moku_choices <- data_loader$get_mokus_for_island(extents_df, island_val)
       updateSelectInput(
         session,
-        inputId = "controls_extents-ecosystem_type",
-        choices = new_types,
-        selected = new_types[1]
+        inputId = "controls_extents-moku",
+        choices = c("All mokus" = "", moku_choices),
+        selected = ""
+      )
+    }, ignoreInit = FALSE)
+
+    # Cascade: Update ecosystem type choices when realm changes
+    observeEvent(extents_inputs$realm(), {
+      realm_val <- extents_inputs$realm()
+      new_types <- if (is.null(realm_val) || realm_val == "All") {
+        filter_choices$ecosystem_types
+      } else {
+        data_loader$get_ecosystem_types_for_realm(extents_df, realm_val)
+      }
+      updateSelectInput(
+        session,
+        inputId  = "controls_extents-ecosystem_type",
+        choices  = new_types,
+        selected = new_types[[1]]
       )
     })
 
-    # Apply filters when extents Apply button clicked
+    # Apply extents filters when Apply button is clicked
     observeEvent(extents_inputs$apply(), {
-      state$applied_island <- global_inputs$island()
-      state$applied_moku <- global_inputs$moku()
-      state$applied_year <- global_inputs$year()
-      state$applied_realm <- extents_inputs$realm()
+      year_a <- as.integer(extents_inputs$year_a())
+      year_b <- as.integer(extents_inputs$year_b())
+
+      if (!is.na(year_a) && !is.na(year_b) && year_a == year_b) {
+        year_a <- min(filter_choices$years)
+        year_b <- max(filter_choices$years)
+      } else if (!is.na(year_a) && !is.na(year_b) && year_a > year_b) {
+        tmp <- year_a
+        year_a <- year_b
+        year_b <- tmp
+      }
+
+      state$applied_island         <- extents_inputs$island()
+      state$applied_moku           <- extents_inputs$moku()
+      state$applied_realm          <- extents_inputs$realm()
       state$applied_ecosystem_type <- extents_inputs$ecosystem_type()
+      state$applied_year_a         <- year_a
+      state$applied_year_b         <- year_b
+    }, ignoreInit = TRUE)
+
+    observeEvent(extents_inputs$reset(), {
+      default_type <- filter_choices$ecosystem_types[[1]]
+      default_island <- filter_choices$islands[[1]]
+      default_moku_choices <- data_loader$get_mokus_for_island(extents_df, default_island)
+      updateSelectInput(session, inputId = "controls_extents-island", choices = filter_choices$islands, selected = default_island)
+      updateSelectInput(session, inputId = "controls_extents-moku", choices = c("All mokus" = "", default_moku_choices), selected = "")
+      updateSelectInput(session, inputId = "controls_extents-realm", choices = c("All", filter_choices$realms), selected = "All")
+      updateSelectInput(session, inputId = "controls_extents-ecosystem_type", choices = filter_choices$ecosystem_types, selected = default_type)
+      updateSelectInput(session, inputId = "controls_extents-year_a", choices = filter_choices$years, selected = min(filter_choices$years))
+      updateSelectInput(session, inputId = "controls_extents-year_b", choices = filter_choices$years, selected = max(filter_choices$years))
+
+      state$applied_island <- default_island
+      state$applied_moku <- ""
+      state$applied_realm <- "All"
+      state$applied_ecosystem_type <- default_type
+      state$applied_year_a <- min(filter_choices$years)
+      state$applied_year_b <- max(filter_choices$years)
     }, ignoreInit = TRUE)
 
     ########################
-    # Fisheries Controls Server
+    # Conditions Controls Server
     ########################
 
-    fisheries_inputs <- controls_uses_fisheries_valuation$server("controls_uses_fisheries_valuation")
+    conditions_inputs <- controls_conditions$server("controls_conditions")
+
+    # Cascade: Update indicator choices when category changes
+    observeEvent(conditions_inputs$category(), {
+      cat_val   <- conditions_inputs$category()
+      new_inds  <- data_loader$get_indicators_for_category(conditions_df, cat_val)
+      updateSelectInput(
+        session,
+        inputId  = "controls_conditions-indicator",
+        choices  = new_inds,
+        selected = new_inds[[1]]
+      )
+    })
+
+    observeEvent(list(conditions_inputs$island(), conditions_inputs$category()), {
+      island_val <- conditions_inputs$island()
+      cat_val <- conditions_inputs$category()
+      realm_val <- if (!is.null(cat_val) && grepl("Terrestrial", cat_val, ignore.case = TRUE)) "Terrestrial" else "Marine"
+      # #region agent log
+      .agent_log(
+        "H1",
+        "conditions island/category observer entered",
+        list(
+          island_is_null = is.null(island_val),
+          island_length = length(island_val),
+          island_value = if (length(island_val) > 0) island_val else NULL,
+          category_is_null = is.null(cat_val),
+          category_length = length(cat_val),
+          category_value = if (length(cat_val) > 0) cat_val else NULL,
+          realm_value = realm_val
+        )
+      )
+      # #endregion
+      if (is.null(island_val) || length(island_val) == 0 || !nzchar(island_val)) {
+        # #region agent log
+        .agent_log(
+          "H4",
+          "island not ready; skipping moku lookup",
+          list(
+            island_is_null = is.null(island_val),
+            island_length = length(island_val),
+            island_value = if (length(island_val) > 0) island_val else NULL
+          ),
+          runId = "post-fix-1"
+        )
+        # #endregion
+        updateSelectInput(
+          session,
+          inputId = "controls_conditions-moku",
+          choices = c("All mokus" = ""),
+          selected = ""
+        )
+        return()
+      }
+      moku_lookup <- tryCatch({
+        conditions_df |>
+          filter(realm == realm_val) |>
+          filter(island == island_val) |>
+          distinct(name2, moku_olelo) |>
+          arrange(moku_olelo)
+      }, error = function(e) {
+        # #region agent log
+        .agent_log(
+          "H1",
+          "moku lookup filter failed",
+          list(
+            error = as.character(e$message),
+            island_is_null = is.null(island_val),
+            island_length = length(island_val),
+            island_value = if (length(island_val) > 0) island_val else NULL,
+            category_value = if (length(cat_val) > 0) cat_val else NULL,
+            realm_value = realm_val
+          )
+        )
+        # #endregion
+        return(conditions_df[0, c("name2", "moku_olelo")])
+      })
+      moku_choices <- setNames(moku_lookup$name2, moku_lookup$moku_olelo)
+      # #region agent log
+      .agent_log(
+        "H2",
+        "moku choices built",
+        list(
+          choices_n = length(moku_choices),
+          first_choice_value = if (length(moku_choices) > 0) unname(moku_choices[[1]]) else NULL
+        )
+      )
+      # #endregion
+      updateSelectInput(
+        session,
+        inputId = "controls_conditions-moku",
+        choices = c("All mokus" = "", moku_choices),
+        selected = ""
+      )
+    }, ignoreInit = FALSE)
+
+    # Apply conditions filters when Apply button is clicked
+    observeEvent(conditions_inputs$apply(), {
+      year_a <- as.integer(conditions_inputs$year_a())
+      year_b <- as.integer(conditions_inputs$year_b())
+      if (!is.na(year_a) && !is.na(year_b) && year_a > year_b) {
+        tmp <- year_a
+        year_a <- year_b
+        year_b <- tmp
+      }
+
+      island_val <- conditions_inputs$island()
+      moku_val <- conditions_inputs$moku()
+      # #region agent log
+      .agent_log(
+        "H3",
+        "conditions apply clicked",
+        list(
+          island_value = if (length(island_val) > 0) island_val else NULL,
+          moku_value = if (length(moku_val) > 0) moku_val else NULL,
+          mode_value = conditions_inputs$mode(),
+          indicator_value = conditions_inputs$indicator(),
+          year_value = conditions_inputs$year(),
+          year_a = year_a,
+          year_b = year_b
+        )
+      )
+      # #endregion
+
+      state$applied_cond_island    <- island_val
+      state$applied_cond_moku      <- if (!is.null(island_val) && nzchar(island_val)) moku_val else ""
+      state$applied_cond_category  <- conditions_inputs$category()
+      state$applied_cond_indicator <- conditions_inputs$indicator()
+      state$applied_cond_mode      <- conditions_inputs$mode()
+      state$applied_cond_year      <- conditions_inputs$year()
+      state$applied_cond_year_a    <- year_a
+      state$applied_cond_year_b    <- year_b
+    }, ignoreInit = TRUE)
+
+    observeEvent(conditions_inputs$reset(), {
+      default_indicator_choices <- data_loader$get_indicators_for_category(conditions_df, default_cond_category)
+      default_indicator <- if (length(default_indicator_choices) > 0) default_indicator_choices[[1]] else ""
+      default_year <- max(conditions_filter_choices$years)
+      default_year_a <- min(conditions_filter_choices$years)
+      default_year_b <- max(conditions_filter_choices$years)
+
+      updateSelectInput(session, inputId = "controls_conditions-mode", choices = c("Value" = "value", "Change (B - A)" = "change"), selected = "value")
+      updateSelectInput(session, inputId = "controls_conditions-island", choices = c("Select island..." = "", conditions_island_choices), selected = "")
+      updateSelectInput(session, inputId = "controls_conditions-moku", choices = c("All mokus" = ""), selected = "")
+      updateSelectInput(session, inputId = "controls_conditions-category", choices = conditions_filter_choices$categories, selected = default_cond_category)
+      updateSelectInput(session, inputId = "controls_conditions-indicator", choices = default_indicator_choices, selected = default_indicator)
+      updateSelectInput(session, inputId = "controls_conditions-year", choices = conditions_filter_choices$years, selected = default_year)
+      updateSelectInput(session, inputId = "controls_conditions-year_a", choices = conditions_filter_choices$years, selected = default_year_a)
+      updateSelectInput(session, inputId = "controls_conditions-year_b", choices = conditions_filter_choices$years, selected = default_year_b)
+
+      state$applied_cond_island <- ""
+      state$applied_cond_moku <- ""
+      state$applied_cond_category <- default_cond_category
+      state$applied_cond_indicator <- default_indicator
+      state$applied_cond_mode <- "value"
+      state$applied_cond_year <- default_year
+      state$applied_cond_year_a <- default_year_a
+      state$applied_cond_year_b <- default_year_b
+    }, ignoreInit = TRUE)
 
     ########################
-    # Filtered Data Reactives
+    # Extents Filtered Data Reactives
     ########################
 
-    # Filtered extents data (sf for map)
-    filtered_extents_sf <- reactive({
+    # For map: filter by ecosystem_type + year (show all mokus for selected island)
+    filtered_extents_map_sf_a <- reactive({
       dat <- extents_sf
-
-      # Apply filters using the filter key columns (island, moku)
       dat <- dat |> filter(island == state$applied_island)
-      dat <- dat |> filter(moku == state$applied_moku)
-      dat <- dat |> filter(year == as.integer(state$applied_year))
-      dat <- dat |> filter(realm == state$applied_realm)
-      dat <- dat |> filter(ecosystem_type == state$applied_ecosystem_type)
+      dat <- dat |> filter(year == as.integer(state$applied_year_a))
 
+      realm_val <- state$applied_realm
+      if (!is.null(realm_val) && realm_val != "All") {
+        dat <- dat |> filter(realm == realm_val)
+      }
+      dat <- dat |> filter(ecosystem_type == state$applied_ecosystem_type)
+      if (!is.null(state$applied_moku) && nzchar(state$applied_moku)) {
+        dat <- dat |> filter(moku == state$applied_moku)
+      }
       dat
     })
 
-    # Filtered extents data (df for table/charts - all years for change calculation)
+    filtered_extents_map_sf_b <- reactive({
+      dat <- extents_sf
+      dat <- dat |> filter(island == state$applied_island)
+      dat <- dat |> filter(year == as.integer(state$applied_year_b))
+
+      realm_val <- state$applied_realm
+      if (!is.null(realm_val) && realm_val != "All") {
+        dat <- dat |> filter(realm == realm_val)
+      }
+      dat <- dat |> filter(ecosystem_type == state$applied_ecosystem_type)
+      if (!is.null(state$applied_moku) && nzchar(state$applied_moku)) {
+        dat <- dat |> filter(moku == state$applied_moku)
+      }
+      dat
+    })
+
+    # For chart/table: filter by island (keep all years and ecosystem types)
     filtered_extents_df <- reactive({
       dat <- extents_df
-
-      # Apply filters (except year - we need all years for accounting table)
       dat <- dat |> filter(island == state$applied_island)
-      dat <- dat |> filter(moku == state$applied_moku)
-      dat <- dat |> filter(realm == state$applied_realm)
-      dat <- dat |> filter(ecosystem_type == state$applied_ecosystem_type)
 
+      realm_val <- state$applied_realm
+      if (!is.null(realm_val) && realm_val != "All") {
+        dat <- dat |> filter(realm == realm_val)
+      }
+      if (!is.null(state$applied_moku) && nzchar(state$applied_moku)) {
+        dat <- dat |> filter(moku == state$applied_moku)
+      }
       dat
     })
 
-    # Selected year reactive
-    selected_year <- reactive({
-      as.integer(state$applied_year)
+    # Selected filter reactives for the extents page server
+    extents_selected <- reactive(list(
+      island         = state$applied_island,
+      moku           = state$applied_moku,
+      realm          = state$applied_realm,
+      ecosystem_type = state$applied_ecosystem_type,
+      year_a         = as.integer(state$applied_year_a),
+      year_b         = as.integer(state$applied_year_b)
+    ))
+
+    extents_change_tbl <- reactive({
+      sel <- extents_selected()
+      extents_summaries$extents_change_table(
+        extents_df = filtered_extents_df(),
+        island = sel$island,
+        realm = sel$realm,
+        ecosystem_type = sel$ecosystem_type,
+        year_a = sel$year_a,
+        year_b = sel$year_b
+      )
     })
 
-    # Selected island reactive (return display name for UI labels)
-    selected_island <- reactive({
-      # Look up the olelo name from the filter key
-      idx <- which(filter_choices$islands == state$applied_island)
-      if (length(idx) > 0) {
-        names(filter_choices$islands)[idx]
-      } else {
-        state$applied_island
+    ########################
+    # Conditions Filtered Data Reactives
+    ########################
+
+    filtered_conditions_df <- reactive({
+      dat <- conditions_df |>
+        filter(
+          indicator == state$applied_cond_indicator,
+          island == state$applied_cond_island,
+          !is.na(value)
+        )
+      if (!is.null(state$applied_cond_moku) && nzchar(state$applied_cond_moku)) {
+        dat <- dat |>
+          filter(name2 == state$applied_cond_moku)
       }
+      dat
+    })
+
+    conditions_selected <- reactive(list(
+      indicator = state$applied_cond_indicator,
+      year      = as.integer(state$applied_cond_year),
+      category  = state$applied_cond_category,
+      island    = state$applied_cond_island,
+      moku      = state$applied_cond_moku,
+      mode      = state$applied_cond_mode,
+      year_a    = as.integer(state$applied_cond_year_a),
+      year_b    = as.integer(state$applied_cond_year_b)
+    ))
+
+    conditions_island_summary_ts <- reactive({
+      sel <- conditions_selected()
+      conditions_summaries$conditions_island_summary_ts(
+        conditions_df = conditions_df,
+        indicator = sel$indicator,
+        island = sel$island
+      )
+    })
+
+    conditions_change_tbl <- reactive({
+      sel <- conditions_selected()
+      conditions_summaries$conditions_change_table(
+        conditions_df = conditions_df,
+        indicator = sel$indicator,
+        island = sel$island,
+        year_a = sel$year_a,
+        year_b = sel$year_b
+      )
+    })
+
+    conditions_indicator_meta <- reactive({
+      sel <- conditions_selected()
+      conditions_metadata$get_indicator_meta(sel$indicator)
     })
 
     ########################
@@ -218,7 +521,7 @@ server <- function(id) {
 
     output$body <- renderUI({
       pages <- routing_spec$page_modules_by_scope()
-      page <- pages[[state$nav_scope]]
+      page  <- pages[[state$nav_scope]]
 
       if (is.null(page)) {
         div("Unknown scope: ", state$nav_scope)
@@ -227,15 +530,35 @@ server <- function(id) {
       }
     })
 
-    # Wire up extents page server when on extents scope
+    # Wire extents page server
     observeEvent(state$nav_scope, {
       if (state$nav_scope == EXTENTS) {
         extents_page$server(
           paste0("page_", EXTENTS),
-          filtered_sf = filtered_extents_sf,
-          filtered_df = filtered_extents_df,
-          selected_year = selected_year,
-          selected_island = selected_island
+          extents_sf       = extents_sf,
+          extents_df       = extents_df,
+          filtered_map_sf_a  = filtered_extents_map_sf_a,
+          filtered_map_sf_b  = filtered_extents_map_sf_b,
+          filtered_df      = filtered_extents_df,
+          selected         = extents_selected,
+          change_tbl       = extents_change_tbl,
+          moku_names_lut   = moku_names_lut
+        )
+      }
+    })
+
+    # Wire conditions page server
+    observeEvent(state$nav_scope, {
+      if (state$nav_scope == CONDITIONS) {
+        conditions_page$server(
+          paste0("page_", CONDITIONS),
+          conditions_df = conditions_df,
+          moku_sf       = moku_sf,
+          filtered_df   = filtered_conditions_df,
+          selected      = conditions_selected,
+          island_summary_ts = conditions_island_summary_ts,
+          change_tbl        = conditions_change_tbl,
+          indicator_meta    = conditions_indicator_meta
         )
       }
     })
@@ -246,44 +569,38 @@ server <- function(id) {
 
     output$controlbar <- renderUI({
       scope_controls <- routing_spec$control_modules_by_scope()
-      scope_module <- scope_controls[[state$nav_scope]]
 
-      # Fisheries has its own complete filter set (no global controls)
-      if (state$nav_scope == USES_FISHERIES_VALUATION) {
-        return(
-          controls_uses_fisheries_valuation$ui(
-            ns("controls_uses_fisheries_valuation"),
-            island_choices = fisheries_filter_choices$islands,
-            ecosystem_choices = fisheries_filter_choices$ecosystem_types,
-            species_group_choices = fisheries_filter_choices$species_groups,
-            year_choices = fisheries_filter_choices$years
+      # Build scope-specific controls UI
+      scope_ui <- switch(
+        state$nav_scope,
+
+        extents = tagList(
+          controls_extents$ui(
+            ns("controls_extents"),
+            island_choices         = filter_choices$islands,
+            moku_choices           = data_loader$get_mokus_for_island(extents_df, state$applied_island),
+            realm_choices          = filter_choices$realms,
+            ecosystem_type_choices = filter_choices$ecosystem_types,
+            year_choices           = filter_choices$years
           )
-        )
-      }
-
-      # Build scope-specific controls UI for other scopes
-      scope_ui <- if (is.null(scope_module)) {
-        NULL
-      } else if (state$nav_scope == EXTENTS) {
-        # Extents needs filter choices
-        controls_extents$ui(
-          ns("controls_extents"),
-          realm_choices = filter_choices$realms,
-          ecosystem_type_choices = filter_choices$ecosystem_types
-        )
-      } else {
-        scope_module$ui(ns(paste0("controls_", state$nav_scope)))
-      }
-
-      tagList(
-        controls_global$ui(
-          ns("controls_global"),
-          island_choices = filter_choices$islands,
-          moku_choices = filter_choices$mokus,
-          year_choices = filter_choices$years
         ),
-        scope_ui
+
+        conditions = tagList(
+          controls_conditions$ui(
+            ns("controls_conditions"),
+            island_choices    = conditions_island_choices,
+            moku_choices      = conditions_moku_choices,
+            category_choices  = conditions_filter_choices$categories,
+            indicator_choices = conditions_filter_choices$indicators_by_category[[1]],
+            year_choices      = conditions_filter_choices$years
+          )
+        ),
+
+        # Default: no controls for home, fisheries, recreation
+        NULL
       )
+
+      scope_ui
     })
 
   })

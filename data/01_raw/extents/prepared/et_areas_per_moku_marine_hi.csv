@@ -1,0 +1,204 @@
+"","layer","value","count","Moku","area km^2"
+"1",1,"Open Ocean",16365,"KOOLAULOA",163.65
+"2",1,"Soft Bottom",935,"KOOLAULOA",9.35
+"3",1,"Other Hard Bottom",446,"KOOLAULOA",4.46
+"4",1,"Rock/Boulder",247,"KOOLAULOA",2.47
+"5",1,"Pavement",3114,"KOOLAULOA",31.14
+"6",1,"Coral Dominated Hard Bottom",2989,"KOOLAULOA",29.89
+"7",1,"Open Ocean",11482,"WAIALUA",114.82
+"8",1,"Soft Bottom",420,"WAIALUA",4.2
+"9",1,"Other Hard Bottom",385,"WAIALUA",3.85
+"10",1,"Rock/Boulder",531,"WAIALUA",5.31
+"11",1,"Pavement",1874,"WAIALUA",18.74
+"12",1,"Coral Dominated Hard Bottom",1388,"WAIALUA",13.88
+"13",1,"Open Ocean",10782,"WAIANAE",107.82
+"14",1,"Soft Bottom",862,"WAIANAE",8.62
+"15",1,"Rock/Boulder",299,"WAIANAE",2.99
+"16",1,"Pavement",2809,"WAIANAE",28.09
+"17",1,"Coral Dominated Hard Bottom",36,"WAIANAE",0.36
+"18",1,"Open Ocean",10808,"EWA",108.08
+"19",1,"Soft Bottom",3647,"EWA",36.47
+"20",1,"Other Hard Bottom",387,"EWA",3.87
+"21",1,"Rock/Boulder",8,"EWA",0.08
+"22",1,"Pavement",6603,"EWA",66.03
+"23",1,"Coral Dominated Hard Bottom",126,"EWA",1.26
+"24",1,"Open Ocean",19599,"KOOLAUPOKO",195.99
+"25",1,"Soft Bottom",2752,"KOOLAUPOKO",27.52
+"26",1,"Other Hard Bottom",469,"KOOLAUPOKO",4.69
+"27",1,"Rock/Boulder",705,"KOOLAUPOKO",7.05
+"28",1,"Pavement",6961,"KOOLAUPOKO",69.61
+"29",1,"Coral Dominated Hard Bottom",4303,"KOOLAUPOKO",43.03
+"30",1,"Open Ocean",6701,"KONA OAH",67.01
+"31",1,"Soft Bottom",799,"KONA OAH",7.99
+"32",1,"Other Hard Bottom",156,"KONA OAH",1.56
+"33",1,"Pavement",3426,"KONA OAH",34.26
+"34",1,"Coral Dominated Hard Bottom",236,"KONA OAH",2.36
+"35",1,"Open Ocean",6553,"HALELEA",65.53
+"36",1,"Soft Bottom",858,"HALELEA",8.58
+"37",1,"Other Hard Bottom",40,"HALELEA",0.4
+"38",1,"Rock/Boulder",94,"HALELEA",0.94
+"39",1,"Pavement",785,"HALELEA",7.85
+"40",1,"Coral Dominated Hard Bottom",2396,"HALELEA",23.96
+"41",1,"Open Ocean",10175,"KOOLAU KAU",101.75
+"42",1,"Soft Bottom",352,"KOOLAU KAU",3.52
+"43",1,"Other Hard Bottom",188,"KOOLAU KAU",1.88
+"44",1,"Rock/Boulder",105,"KOOLAU KAU",1.05
+"45",1,"Pavement",1613,"KOOLAU KAU",16.13
+"46",1,"Coral Dominated Hard Bottom",842,"KOOLAU KAU",8.42
+"47",1,"Open Ocean",6784,"NAPALI",67.84
+"48",1,"Soft Bottom",612,"NAPALI",6.12
+"49",1,"Other Hard Bottom",109,"NAPALI",1.09
+"50",1,"Rock/Boulder",86,"NAPALI",0.86
+"51",1,"Pavement",306,"NAPALI",3.06
+"52",1,"Coral Dominated Hard Bottom",5040,"NAPALI",50.4
+"53",1,"Open Ocean",12251,"PUNA KAU",122.51
+"54",1,"Soft Bottom",696,"PUNA KAU",6.96
+"55",1,"Other Hard Bottom",58,"PUNA KAU",0.58
+"56",1,"Pavement",3725,"PUNA KAU",37.25
+"57",1,"Coral Dominated Hard Bottom",119,"PUNA KAU",1.19
+"58",1,"Open Ocean",18833,"KONA KAU",188.33
+"59",1,"Soft Bottom",1344,"KONA KAU",13.44
+"60",1,"Rock/Boulder",910,"KONA KAU",9.1
+"61",1,"Pavement",3607,"KONA KAU",36.07
+"62",1,"Coral Dominated Hard Bottom",82,"KONA KAU",0.82
+"63",1,"Open Ocean",8250,"MANA",82.5
+"64",1,"Soft Bottom",635,"MANA",6.35
+"65",1,"Other Hard Bottom",26,"MANA",0.26
+"66",1,"Pavement",1530,"MANA",15.3
+"67",1,"Coral Dominated Hard Bottom",1122,"MANA",11.22
+"68",1,"Open Ocean",6419,"KOOLAU NIH",64.19
+"69",1,"Soft Bottom",283,"KOOLAU NIH",2.83
+"70",1,"Rock/Boulder",1375,"KOOLAU NIH",13.75
+"71",1,"Pavement",21,"KOOLAU NIH",0.21
+"72",1,"Open Ocean",18705,"KONA NIH",187.05
+"73",1,"Soft Bottom",368,"KONA NIH",3.68
+"74",1,"Rock/Boulder",7828,"KONA NIH",78.28
+"75",1,"Pavement",1,"KONA NIH",0.01
+"76",1,"Coral Dominated Hard Bottom",7,"KONA NIH",0.07
+"77",1,"Open Ocean",11287,"PUNA NIH",112.87
+"78",1,"Soft Bottom",559,"PUNA NIH",5.59
+"79",1,"Rock/Boulder",2054,"PUNA NIH",20.54
+"80",1,"Coral Dominated Hard Bottom",776,"PUNA NIH",7.76
+"81",1,"Open Ocean",17007,"KOOLAU MOL",170.07
+"82",1,"Soft Bottom",205,"KOOLAU MOL",2.05
+"83",1,"Rock/Boulder",1488,"KOOLAU MOL",14.88
+"84",1,"Pavement",1017,"KOOLAU MOL",10.17
+"85",1,"Coral Dominated Hard Bottom",304,"KOOLAU MOL",3.04
+"86",1,"Open Ocean",12059,"KALAWA",120.59
+"87",1,"Soft Bottom",3,"KALAWA",0.03
+"88",1,"Rock/Boulder",1935,"KALAWA",19.35
+"89",1,"Coral Dominated Hard Bottom",84,"KALAWA",0.84
+"90",1,"Open Ocean",2344,"PALAAU",23.44
+"91",1,"Soft Bottom",577,"PALAAU",5.77
+"92",1,"Other Hard Bottom",50,"PALAAU",0.5
+"93",1,"Pavement",876,"PALAAU",8.76
+"94",1,"Coral Dominated Hard Bottom",852,"PALAAU",8.52
+"95",1,"Open Ocean",17622,"KALUAKOI",176.22
+"96",1,"Soft Bottom",1550,"KALUAKOI",15.5
+"97",1,"Rock/Boulder",1093,"KALUAKOI",10.93
+"98",1,"Pavement",3314,"KALUAKOI",33.14
+"99",1,"Coral Dominated Hard Bottom",1376,"KALUAKOI",13.76
+"100",1,"Open Ocean",16481,"KONA MOL",164.81
+"101",1,"Soft Bottom",2657,"KONA MOL",26.57
+"102",1,"Other Hard Bottom",75,"KONA MOL",0.75
+"103",1,"Rock/Boulder",202,"KONA MOL",2.02
+"104",1,"Pavement",3261,"KONA MOL",32.61
+"105",1,"Coral Dominated Hard Bottom",2944,"KONA MOL",29.44
+"106",1,"Open Ocean",8381,"KAANAPALI",83.81
+"107",1,"Soft Bottom",1147,"KAANAPALI",11.47
+"108",1,"Other Hard Bottom",9,"KAANAPALI",0.09
+"109",1,"Rock/Boulder",246,"KAANAPALI",2.46
+"110",1,"Pavement",880,"KAANAPALI",8.8
+"111",1,"Coral Dominated Hard Bottom",283,"KAANAPALI",2.83
+"112",1,"Open Ocean",4122,"HAMAKUAPOKO",41.22
+"113",1,"Soft Bottom",198,"HAMAKUAPOKO",1.98
+"114",1,"Rock/Boulder",59,"HAMAKUAPOKO",0.59
+"115",1,"Pavement",741,"HAMAKUAPOKO",7.41
+"116",1,"Coral Dominated Hard Bottom",1564,"HAMAKUAPOKO",15.64
+"117",1,"Open Ocean",9881,"HAMAKUALOA",98.81
+"118",1,"Soft Bottom",190,"HAMAKUALOA",1.9
+"119",1,"Rock/Boulder",1160,"HAMAKUALOA",11.6
+"120",1,"Pavement",16,"HAMAKUALOA",0.16
+"121",1,"Coral Dominated Hard Bottom",397,"HAMAKUALOA",3.97
+"122",1,"Open Ocean",9448,"WAILUKU",94.48
+"123",1,"Soft Bottom",865,"WAILUKU",8.65
+"124",1,"Rock/Boulder",922,"WAILUKU",9.22
+"125",1,"Pavement",368,"WAILUKU",3.68
+"126",1,"Coral Dominated Hard Bottom",972,"WAILUKU",9.72
+"127",1,"Open Ocean",7454,"KOOLAU MAU",74.54
+"128",1,"Rock/Boulder",470,"KOOLAU MAU",4.7
+"129",1,"Coral Dominated Hard Bottom",1398,"KOOLAU MAU",13.98
+"130",1,"Open Ocean",6105,"LAHAINA",61.05
+"131",1,"Soft Bottom",2023,"LAHAINA",20.23
+"132",1,"Other Hard Bottom",3,"LAHAINA",0.03
+"133",1,"Rock/Boulder",9,"LAHAINA",0.09
+"134",1,"Pavement",760,"LAHAINA",7.6
+"135",1,"Coral Dominated Hard Bottom",278,"LAHAINA",2.78
+"136",1,"Open Ocean",7825,"KEALALOLOA",78.25
+"137",1,"Soft Bottom",1663,"KEALALOLOA",16.63
+"138",1,"Rock/Boulder",4,"KEALALOLOA",0.04
+"139",1,"Pavement",274,"KEALALOLOA",2.74
+"140",1,"Coral Dominated Hard Bottom",879,"KEALALOLOA",8.79
+"141",1,"Open Ocean",1109,"KULA",11.09
+"142",1,"Soft Bottom",1362,"KULA",13.62
+"143",1,"Other Hard Bottom",2,"KULA",0.02
+"144",1,"Rock/Boulder",18,"KULA",0.18
+"145",1,"Pavement",211,"KULA",2.11
+"146",1,"Coral Dominated Hard Bottom",1032,"KULA",10.32
+"147",1,"Open Ocean",12726,"HANA",127.26
+"148",1,"Soft Bottom",88,"HANA",0.88
+"149",1,"Rock/Boulder",416,"HANA",4.16
+"150",1,"Coral Dominated Hard Bottom",1129,"HANA",11.29
+"151",1,"Open Ocean",4218,"KIPAHULU",42.18
+"152",1,"Soft Bottom",240,"KIPAHULU",2.4
+"153",1,"Rock/Boulder",297,"KIPAHULU",2.97
+"154",1,"Coral Dominated Hard Bottom",43,"KIPAHULU",0.43
+"155",1,"Open Ocean",12850,"HONUAULA",128.5
+"156",1,"Soft Bottom",932,"HONUAULA",9.32
+"157",1,"Other Hard Bottom",11,"HONUAULA",0.11
+"158",1,"Rock/Boulder",317,"HONUAULA",3.17
+"159",1,"Pavement",14,"HONUAULA",0.14
+"160",1,"Coral Dominated Hard Bottom",2044,"HONUAULA",20.44
+"161",1,"Open Ocean",19650,"KOOLAU LAN",196.5
+"162",1,"Soft Bottom",1236,"KOOLAU LAN",12.36
+"163",1,"Other Hard Bottom",19,"KOOLAU LAN",0.19
+"164",1,"Rock/Boulder",32,"KOOLAU LAN",0.32
+"165",1,"Pavement",1375,"KOOLAU LAN",13.75
+"166",1,"Coral Dominated Hard Bottom",1612,"KOOLAU LAN",16.12
+"167",1,"Open Ocean",23884,"KONA LAN",238.84
+"168",1,"Soft Bottom",431,"KONA LAN",4.31
+"169",1,"Rock/Boulder",469,"KONA LAN",4.69
+"170",1,"Pavement",5,"KONA LAN",0.05
+"171",1,"Coral Dominated Hard Bottom",1226,"KONA LAN",12.26
+"172",1,"Open Ocean",13231,"KOOLAU KAH",132.31
+"173",1,"Soft Bottom",131,"KOOLAU KAH",1.31
+"174",1,"Rock/Boulder",1177,"KOOLAU KAH",11.77
+"175",1,"Coral Dominated Hard Bottom",848,"KOOLAU KAH",8.48
+"176",1,"Open Ocean",17036,"KONA KAH",170.36
+"177",1,"Soft Bottom",324,"KONA KAH",3.24
+"178",1,"Rock/Boulder",650,"KONA KAH",6.5
+"179",1,"Coral Dominated Hard Bottom",1059,"KONA KAH",10.59
+"180",1,"Open Ocean",23353,"HAMAKUA",233.53
+"181",1,"Rock/Boulder",2394,"HAMAKUA",23.94
+"182",1,"Open Ocean",33097,"KOHALA",330.97
+"183",1,"Soft Bottom",576,"KOHALA",5.76
+"184",1,"Other Hard Bottom",41,"KOHALA",0.41
+"185",1,"Rock/Boulder",2058,"KOHALA",20.58
+"186",1,"Coral Dominated Hard Bottom",2533,"KOHALA",25.33
+"187",1,"Open Ocean",29817,"HILO",298.17
+"188",1,"Soft Bottom",464,"HILO",4.64
+"189",1,"Rock/Boulder",1753,"HILO",17.53
+"190",1,"Pavement",112,"HILO",1.12
+"191",1,"Coral Dominated Hard Bottom",2515,"HILO",25.15
+"192",1,"Open Ocean",42663,"PUNA HAW",426.63
+"193",1,"Soft Bottom",56,"PUNA HAW",0.56
+"194",1,"Rock/Boulder",1568,"PUNA HAW",15.68
+"195",1,"Coral Dominated Hard Bottom",1126,"PUNA HAW",11.26
+"196",1,"Open Ocean",54115,"KONA HAW",541.15
+"197",1,"Soft Bottom",565,"KONA HAW",5.65
+"198",1,"Rock/Boulder",923,"KONA HAW",9.23
+"199",1,"Coral Dominated Hard Bottom",4357,"KONA HAW",43.57
+"200",1,"Open Ocean",49750,"KAU",497.5
+"201",1,"Soft Bottom",46,"KAU",0.46
+"202",1,"Rock/Boulder",723,"KAU",7.23
+"203",1,"Coral Dominated Hard Bottom",3758,"KAU",37.58

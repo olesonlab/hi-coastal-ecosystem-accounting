@@ -1,0 +1,851 @@
+name2,year,indicator,value,ci_lower,ci_upper,category,realm,moku,moku_olelo,island,island_olelo
+HALELEA,2013,kd490,0.0396060380256838,0.0322154581546783,0.0555824890732765,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2016,kd490,0.0403941482719448,0.0322005048394203,0.0510347560048103,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,kd490,0.0414976967459029,0.0329795233905315,0.0519837841391563,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+KOOLAU KAU,2013,kd490,0.0340455291468812,0.0280724549666047,0.0416409680619836,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2016,kd490,0.0337588244930227,0.0272596383467317,0.0431105673313141,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,kd490,0.0381315459120781,0.0306240813806653,0.0545072689652443,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+NAPALI,2013,kd490,0.0430412030521225,0.0321826383471489,0.060788943246007,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2016,kd490,0.0398197615843104,0.0315274083986878,0.0504773510619998,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2019,kd490,0.0404645403490422,0.0329451985657215,0.0514909207820892,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+MANA,2013,kd490,0.044244027755996,0.0348699256777763,0.0542090233415365,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2016,kd490,0.0412057776875952,0.036637968942523,0.0477437898516655,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2019,kd490,0.0387429503446564,0.0320886697620153,0.0501762952655554,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+KOOLAU NIH,2013,kd490,0.0314199750886319,0.0270973209291697,0.0354612719267607,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2016,kd490,0.030543737390891,0.0267420025542378,0.0353380180895329,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,kd490,0.0321250133454166,0.0276518892496824,0.0363355979323387,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+PUNA KAU,2013,kd490,0.0328194771123969,0.0272313682362437,0.0376740526407957,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2016,kd490,0.0315113885166204,0.0273826797492802,0.0358933340758085,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,kd490,0.0354089469034621,0.0286947324872017,0.0451428156346083,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+KONA KAU,2013,kd490,0.0371394525975623,0.0322320953011513,0.0441681627184153,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2016,kd490,0.03438679909611,0.0303407117724419,0.0389014158397913,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,kd490,0.0365351227290453,0.0303784407675266,0.0429909035563469,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA NIH,2013,kd490,0.034916683793702,0.0294241020455956,0.0421508178114891,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2016,kd490,0.0339328446920882,0.0285064136609435,0.0399327624589205,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2019,kd490,0.03250360033138,0.0283918829634786,0.038539071008563,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+PUNA NIH,2013,kd490,0.0307703069708449,0.0268753448501229,0.0351232632994652,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2016,kd490,0.0297349675538692,0.0267899258062243,0.0341603167355061,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,kd490,0.0312224551242717,0.027384284697473,0.0357139248400927,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+KOOLAULOA,2013,kd490,0.0365132582684358,0.0312021300196648,0.0410024233162403,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2016,kd490,0.0370400739001467,0.0311046179383993,0.0454735849052667,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,kd490,0.0367569155356985,0.0314154960215092,0.0428992457687855,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+WAIALUA,2013,kd490,0.0349789336737659,0.0302472211420536,0.0419925324618816,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2016,kd490,0.034188236882712,0.030173353664577,0.0391805402934551,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,kd490,0.0350446987183804,0.0318485990166664,0.0394266545772552,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,kd490,0.0363350877199661,0.0293799077160656,0.0431631816551089,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2016,kd490,0.03478141188463,0.0286570364609361,0.0425498571246862,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,kd490,0.0351251619372596,0.030009974911809,0.0408075477927923,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+EWA,2013,kd490,0.0462547743126102,0.0354286953806877,0.0612563248723745,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2016,kd490,0.0429057904935264,0.0321888722479343,0.0551753789186478,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,kd490,0.037556653525284,0.0290461480617523,0.0462704416364431,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+KOOLAUPOKO,2013,kd490,0.0332731837406754,0.0287750884890556,0.0387230766937137,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2016,kd490,0.0330098192108438,0.0283265942707658,0.0385854966938496,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,kd490,0.0333944725942739,0.02886120993644,0.0377249598503113,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KONA OAH,2013,kd490,0.0364633559289834,0.0315253287553787,0.0422366233542562,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2016,kd490,0.0347614033108062,0.029426091350615,0.0416676696389914,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,kd490,0.0332940424534869,0.0289536312222481,0.0393801223486662,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KOOLAU MOL,2013,kd490,0.034761726023986,0.0303698729723692,0.0393507994711399,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2016,kd490,0.0350475409959859,0.0294611470773816,0.0421243093907833,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,kd490,0.0347026758926346,0.0305899051949382,0.0397211588919163,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+PALAAU,2013,kd490,0.0477916950529272,0.03840008135885,0.0592755056917667,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2016,kd490,0.0457720580570241,0.035917267203331,0.0575860925018787,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,kd490,0.0450451423988697,0.0338322531431913,0.0624838329851627,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+KALUAKOI,2013,kd490,0.0363231227990795,0.0317651186138391,0.0419260315597057,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2016,kd490,0.0353968465264807,0.0305108027532697,0.0414938136935234,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2019,kd490,0.0344210497321601,0.0300583699718118,0.0407461475580931,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KONA MOL,2013,kd490,0.0384931378859155,0.0336622644215822,0.0444636359810829,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2016,kd490,0.0378744476970206,0.0335429474711418,0.0441788870841265,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,kd490,0.0367543160360544,0.0325273621827364,0.0429804783314467,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KAANAPALI,2013,kd490,0.0383916952587823,0.031170722655952,0.0504296857863665,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2016,kd490,0.0375696040214376,0.0310924096032977,0.0439608160406351,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,kd490,0.0369703356335138,0.032277475297451,0.0457312982529402,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+HAMAKUAPOKO,2013,kd490,0.0364783261385229,0.0312537506222725,0.0452783204615116,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2016,kd490,0.0409303594973277,0.0307990271598101,0.0570883756503463,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,kd490,0.0381564400456053,0.031910802051425,0.0525697544217109,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUALOA,2013,kd490,0.034942234061997,0.0305068242363632,0.0403596829622984,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2016,kd490,0.0393927486406432,0.028880325332284,0.060118393599987,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2019,kd490,0.0363594019349585,0.0307319538667798,0.0443926680833101,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+WAILUKU,2013,kd490,0.0359710043042221,0.0305418100208044,0.0435384474694729,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2016,kd490,0.0369192644615065,0.0305113266222179,0.0465232539921999,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,kd490,0.0357507676520246,0.0307171255350113,0.043116070702672,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+KOOLAU MAU,2013,kd490,0.036610979132536,0.0301809422671795,0.0456357635557652,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2016,kd490,0.040319053178772,0.0301263416185975,0.0617830313742161,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2019,kd490,0.0373675789129227,0.0314290028065443,0.0426453247666359,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+LAHAINA,2013,kd490,0.0331671092320572,0.0292006006464362,0.0391948273405433,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2016,kd490,0.033298839814961,0.0296361977234483,0.0388143677264452,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,kd490,0.0326264100743735,0.0293096201494336,0.0365477114915848,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+KOOLAU LAN,2013,kd490,0.035253389044962,0.0310586251318455,0.042434848845005,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2016,kd490,0.0352168482272549,0.0308021239936352,0.0406548745930195,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,kd490,0.0348438905512399,0.0293866699561477,0.0414240144193172,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KEALALOLOA,2013,kd490,0.0356087697993802,0.0298786400817335,0.0426263883709908,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2016,kd490,0.0366685396813332,0.0304812625050545,0.043831130862236,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,kd490,0.0354732512397335,0.0302463812753558,0.0404948364943266,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KULA,2013,kd490,0.0377878592086908,0.031721561960876,0.045203484967351,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KULA,2016,kd490,0.0387118255156417,0.0316784657537937,0.0454718522727489,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KULA,2019,kd490,0.0365728744022224,0.0308885807171464,0.0429607275873423,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KONA LAN,2013,kd490,0.0381081660642572,0.0331980353221297,0.0446377880871296,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+KONA LAN,2016,kd490,0.0372784937474322,0.0327113572508097,0.0417571652680635,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+KONA LAN,2019,kd490,0.0356427909053387,0.0306613733991981,0.0412067245692015,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+HANA,2013,kd490,0.0326360851018266,0.0284965039230883,0.0384233333170414,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+HANA,2016,kd490,0.0334626880028973,0.0282950131222606,0.0434501236304641,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+HANA,2019,kd490,0.0327912880543699,0.0289083832874894,0.0367010425776243,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+KIPAHULU,2013,kd490,0.0316350676533249,0.0274722538888454,0.0359669998288155,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2016,kd490,0.031975257024169,0.0278732653707266,0.0365225404500961,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2019,kd490,0.0321571831294197,0.0280165461823344,0.0376710955053568,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KAUPO,2013,kd490,0.031699255635233,0.0274119568057358,0.0361138144508004,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAUPO,2016,kd490,0.031924674084977,0.0276365117169917,0.036959707736969,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAUPO,2019,kd490,0.03182392293944,0.0281207174062729,0.0367902543395758,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAHIKINUI,2013,kd490,0.0306109787303616,0.0268195183947682,0.035210639052093,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2016,kd490,0.0309158104689831,0.0269655678421259,0.0357002221047878,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2019,kd490,0.0304688022253995,0.0276206908747554,0.0354630827903748,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KOOLAU KAH,2013,kd490,0.0321485168988938,0.0285706641152501,0.0375500861555338,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2016,kd490,0.0329502893889204,0.0292538229376078,0.0378914747387171,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2019,kd490,0.0319933710580177,0.0286392683163285,0.0362964410334825,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+HONUAULA,2013,kd490,0.0332551645115018,0.0287772924639285,0.0391958178952336,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2016,kd490,0.033092723366745,0.0285050984472036,0.036923249438405,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2019,kd490,0.0319494509950597,0.0285776793956757,0.036831646412611,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+KONA KAH,2013,kd490,0.0311514512127773,0.0274432747624815,0.0350590370595455,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2016,kd490,0.0320380541713948,0.0274494407698512,0.0380649585276842,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,kd490,0.0312288189108701,0.0280656047165394,0.0351424966007471,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+HAMAKUA,2013,kd490,0.0336321146566082,0.0290336824022234,0.0372438566759229,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2016,kd490,0.0365233135855068,0.0301581234671175,0.0440134620293975,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,kd490,0.0348473319268607,0.0308513840660453,0.041409216076135603,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+KOHALA,2013,kd490,0.0332054959491212,0.0297186022624373,0.0371498882770538,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2016,kd490,0.0342005878845428,0.0303057776764035,0.039625471457839,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,kd490,0.0332663623576469,0.0295960232615471,0.038370356708765,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+HILO,2013,kd490,0.0412836715579033,0.0302789349108934,0.0499390430748463,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2016,kd490,0.0378959221441461,0.0298232277855277,0.0511487610638142,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,kd490,0.0373586240283986,0.032577096670866,0.0478698257356882,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+PUNA HAW,2013,kd490,0.0327020187497787,0.0281933778896928,0.0394939901307225,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2016,kd490,0.0333447514220755,0.0285998437553644,0.0407029744237661,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,kd490,0.0331670137399689,0.0293773051351309,0.0384020633995533,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+KONA HAW,2013,kd490,0.0347525513869651,0.0310817709192634,0.0379691801965237,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2016,kd490,0.0352380072024274,0.0323310870677233,0.0392384465783834,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2019,kd490,0.0334963489006808,0.0299842312932014,0.0380018759518862,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KAU,2013,kd490,0.0308535790637783,0.0270997965708375,0.0343159520998597,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2016,kd490,0.0314713980051431,0.0277571769431233,0.0362112630158663,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2019,kd490,0.030774375106743,0.0276869371533394,0.0341318476945162,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+HALELEA,2013,sst,25.028573989999998,23.23631096,26.82083702,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2016,sst,25.55006003,24.33624315,26.76387691,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,sst,25.426444435,23.08582764,27.76706123,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+KOOLAU KAU,2013,sst,25.02012081,23.17490616,26.86533546,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2016,sst,25.598978045000003,24.39837122,26.79958487,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,sst,25.46485462,23.1132019,27.81650734,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+NAPALI,2013,sst,25.086393735,23.2584938,26.91429367,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2016,sst,25.64019561,24.28274107,26.99765015,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2019,sst,25.501294899999998,23.12616539,27.87642441,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+MANA,2013,sst,25.236078075000002,23.39746819,27.07468796,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2016,sst,25.845766545,24.42827129,27.2632618,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2019,sst,25.592690275000002,23.25218887,27.93319168,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+KOOLAU NIH,2013,sst,25.317343525,23.42206612,27.21262093,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2016,sst,25.899579765,24.50419712,27.29496241,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,sst,25.665049555,23.20647278,28.12362633,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+PUNA KAU,2013,sst,25.081822965,23.2301342,26.93351173,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2016,sst,25.664340735,24.46016741,26.86851406,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,sst,25.508702470000003,23.16625557,27.85114937,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+KONA KAU,2013,sst,25.25990543,23.47598953,27.04382133,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2016,sst,25.851724625,24.62960196,27.07384729,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,sst,25.634346195,23.33171806,27.93697433,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA NIH,2013,sst,25.34746685,23.41026802,27.28466568,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2016,sst,25.932789085,24.50241899,27.36315918,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2019,sst,25.718511579999998,23.18564491,28.25137825,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+PUNA NIH,2013,sst,25.364865305000002,23.4630188,27.26671181,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2016,sst,25.946988345,24.5331254,27.36085129,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,sst,25.789838985,23.26217499,28.31750298,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+KOOLAULOA,2013,sst,25.028359029999997,23.27245636,26.7842617,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2016,sst,25.60336518,24.27557325,26.93115711,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,sst,25.45833454,23.28329544,27.63337364,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+WAIALUA,2013,sst,25.327093315,23.61276627,27.04142036,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2016,sst,25.84773946,24.45474434,27.24073458,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,sst,25.56846886,23.38595467,27.75098305,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,sst,25.571193315000002,23.83874283,27.3036438,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2016,sst,26.121650695,24.65548038,27.58782101,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,sst,25.832281875,23.63037529,28.03418846,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+EWA,2013,sst,25.52853851,23.78876762,27.2683094,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2016,sst,26.18839765,24.77369738,27.60309792,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,sst,25.862683105000002,23.58404732,28.14131889,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+KOOLAUPOKO,2013,sst,25.03044853,23.25541153,26.80548553,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2016,sst,25.730597975000002,24.36207104,27.09912491,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,sst,25.552621074999998,23.28568954,27.81955261,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KONA OAH,2013,sst,25.210554885,23.44587021,26.97523956,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2016,sst,25.94935012,24.57577753,27.32292271,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,sst,25.733561705,23.42648048,28.04064293,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KOOLAU MOL,2013,sst,24.862353515,23.13614998,26.58855705,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2016,sst,25.660490035000002,24.39032507,26.930655,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,sst,25.49315853,23.33318481,27.65313225,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+PALAAU,2013,sst,25.17208309,23.52038498,26.8237812,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2016,sst,25.881521225,24.50895548,27.25408697,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,sst,25.76531677,23.56868629,27.96194725,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+KALUAKOI,2013,sst,25.187631415,23.50087471,26.87438812,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2016,sst,25.920651915,24.54624987,27.29505396,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2019,sst,25.79638405,23.53172684,28.06104126,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KONA MOL,2013,sst,25.068018340000002,23.43701019,26.69902649,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2016,sst,25.844059225,24.47432756,27.21379089,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,sst,25.793214419999998,23.58410149,28.00232735,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KAANAPALI,2013,sst,25.010037615,23.39240494,26.62767029,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2016,sst,25.83498621,24.46470261,27.20526981,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,sst,25.820145605,23.61569023,28.02460098,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+HAMAKUAPOKO,2013,sst,24.83699417,23.19912605,26.47486229,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2016,sst,25.689690589999998,24.38387203,26.99550915,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,sst,25.65421944,23.57270699,27.73573189,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUALOA,2013,sst,24.82990742,23.1857399,26.47407494,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2016,sst,25.730053185000003,24.42419195,27.03591442,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2019,sst,25.67952366,23.67935219,27.67969513,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+WAILUKU,2013,sst,24.8849638,23.25059433,26.51933327,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2016,sst,25.74827957,24.45070314,27.045856,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,sst,25.70055618,23.57973785,27.82137451,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+KOOLAU MAU,2013,sst,24.853681755,23.2413105,26.46605301,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2016,sst,25.770436525,24.44718504,27.09368801,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2019,sst,25.705922125,23.71385269,27.69799156,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+LAHAINA,2013,sst,25.22856941,23.64500999,26.81212883,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2016,sst,26.00957942,24.53424883,27.48491001,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,sst,26.02728386,23.73096619,28.32360153,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+KOOLAU LAN,2013,sst,25.315297129999998,23.74638405,26.88421021,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2016,sst,26.04756975,24.57427597,27.52086353,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,sst,26.01225357,23.74186287,28.28264427,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KEALALOLOA,2013,sst,25.29100876,23.77979698,26.80222054,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2016,sst,26.04673433,24.58202314,27.51144552,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,sst,26.03766422,23.7892086,28.28611984,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KULA,2013,sst,25.21264076,23.70124931,26.72403221,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KULA,2016,sst,26.000296114999998,24.56015539,27.44043684,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KULA,2019,sst,25.97365475,23.75924454,28.18806496,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KONA LAN,2013,sst,25.50821571,23.94582443,27.07060699,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+KONA LAN,2016,sst,26.214463475000002,24.69395304,27.73497391,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+KONA LAN,2019,sst,26.150393295,23.84671516,28.45407143,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+HANA,2013,sst,24.960340695,23.40875626,26.51192513,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+HANA,2016,sst,25.90622854,24.54456758,27.2678895,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+HANA,2019,sst,25.835443685,23.83043556,27.84045181,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+KIPAHULU,2013,sst,25.052338409999997,23.59875031,26.50592651,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2016,sst,25.950688839999998,24.59468174,27.30669594,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2019,sst,25.94588795,23.87611542,28.01566048,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KAUPO,2013,sst,25.145116235,23.76711884,26.52311363,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAUPO,2016,sst,26.016022205,24.64354372,27.38850069,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAUPO,2019,sst,26.011657525,23.9112484,28.11206665,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAHIKINUI,2013,sst,25.285274885,23.92726402,26.64328575,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2016,sst,26.084654805,24.71730089,27.45200872,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2019,sst,26.105023765,24.00478973,28.2052578,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KOOLAU KAH,2013,sst,25.435186765,23.96228981,26.90808372,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2016,sst,26.166701555,24.67594242,27.65746069,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2019,sst,26.1486248,23.89488983,28.40235977,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+HONUAULA,2013,sst,25.34100304,23.94064255,26.74136353,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2016,sst,26.109510184999998,24.67389393,27.54512644,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2019,sst,26.079263495,23.94111671,28.21741028,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+KONA KAH,2013,sst,25.501166535,24.05121994,26.95111313,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2016,sst,26.21429062,24.72541666,27.70316458,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,sst,26.146659470000003,23.92141991,28.37189903,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+HAMAKUA,2013,sst,25.005947495,23.5190155,26.49287949,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2016,sst,25.90442729,24.57446718,27.2343874,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,sst,25.86753712,24.06359215,27.67148209,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+KOHALA,2013,sst,25.34851036,23.98096275,26.71605797,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2016,sst,26.211758615,24.85542822,27.56808901,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,sst,26.241643715000002,24.25275307,28.23053436,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+HILO,2013,sst,24.948830795,23.38563652,26.51202507,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2016,sst,25.853338479999998,24.54372549,27.16295147,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,sst,25.80766773,24.06877708,27.54655838,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+PUNA HAW,2013,sst,25.01909981,23.47524109,26.56295853,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2016,sst,25.885287045,24.67562771,27.09494638,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,sst,25.837558365,24.16091805,27.51419868,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+KONA HAW,2013,sst,25.608987810000002,24.27450676,26.94346886,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2016,sst,26.41387081,24.97337055,27.85437107,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2019,sst,26.551888085,24.54912186,28.55465431,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KAU,2013,sst,25.244740104999998,23.85265656,26.63682365,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2016,sst,26.048805,24.84335518,27.25425482,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2019,sst,26.07231083,24.41052437,27.73409729,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+HALELEA,2013,par,42.91385192,NA,NA,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2016,par,42.04850306,NA,NA,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,par,43.66127724,NA,NA,Marine Abiotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+KOOLAU KAU,2013,par,42.18907908,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2016,par,42.00316393,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,par,43.60126439,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+NAPALI,2013,par,43.23862904,NA,NA,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2016,par,42.29606032,NA,NA,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2019,par,43.25353732,NA,NA,Marine Abiotic,Marine,napali,Nāpali,kauai,Kaua‘i
+MANA,2013,par,43.2216094,NA,NA,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2016,par,43.78398506,NA,NA,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2019,par,44.93112775,NA,NA,Marine Abiotic,Marine,mana,Mana,kauai,Kaua'i
+KOOLAU NIH,2013,par,44.8346293,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2016,par,45.22913215,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,par,46.37209495,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+PUNA KAU,2013,par,42.39748663,NA,NA,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2016,par,42.87996641,NA,NA,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,par,44.79927294,NA,NA,Marine Abiotic,Marine,puna,Puna,kauai,Kaua‘i
+KONA KAU,2013,par,43.44332857,NA,NA,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2016,par,44.48578895,NA,NA,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,par,45.51334552,NA,NA,Marine Abiotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA NIH,2013,par,43.63532285,NA,NA,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2016,par,43.84626332,NA,NA,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2019,par,45.59195267,NA,NA,Marine Abiotic,Marine,kona,Kona,niihau,Ni‘ihau
+PUNA NIH,2013,par,43.92172882,NA,NA,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2016,par,44.83341712,NA,NA,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,par,45.93561899,NA,NA,Marine Abiotic,Marine,puna,Puna,niihau,Ni‘ihau
+KOOLAULOA,2013,par,42.6397264,NA,NA,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2016,par,42.80213031,NA,NA,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,par,44.56424912,NA,NA,Marine Abiotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+WAIALUA,2013,par,43.06896595,NA,NA,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2016,par,43.86972886,NA,NA,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,par,45.51406467,NA,NA,Marine Abiotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,par,41.55802694,NA,NA,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2016,par,42.23319719,NA,NA,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,par,44.45362306,NA,NA,Marine Abiotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+EWA,2013,par,43.06044144,NA,NA,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2016,par,43.73008249,NA,NA,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,par,45.81331001,NA,NA,Marine Abiotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+KOOLAUPOKO,2013,par,43.51252191,NA,NA,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2016,par,43.56175788,NA,NA,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,par,46.18234229,NA,NA,Marine Abiotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KONA OAH,2013,par,44.58985499,NA,NA,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2016,par,44.83625229,NA,NA,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,par,47.04329856,NA,NA,Marine Abiotic,Marine,kona,Kona,oahu,O‘ahu
+KOOLAU MOL,2013,par,44.32707332,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2016,par,43.51798658,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,par,46.35519908,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+PALAAU,2013,par,44.12783728,NA,NA,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2016,par,43.4795072,NA,NA,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,par,46.50725973,NA,NA,Marine Abiotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+KALUAKOI,2013,par,43.2567385,NA,NA,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2016,par,43.080061,NA,NA,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2019,par,46.05119575,NA,NA,Marine Abiotic,Marine,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KONA MOL,2013,par,43.92107679,NA,NA,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2016,par,43.32800033,NA,NA,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,par,46.58903248,NA,NA,Marine Abiotic,Marine,kona,Kona,molokai,Moloka‘i
+KAANAPALI,2013,par,44.20769923,NA,NA,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2016,par,43.43974771,NA,NA,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,par,46.7527838,NA,NA,Marine Abiotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+HAMAKUAPOKO,2013,par,44.58880542,NA,NA,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2016,par,42.71973212,NA,NA,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,par,46.23037083,NA,NA,Marine Abiotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUALOA,2013,par,43.67060937,NA,NA,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2016,par,41.56215574,NA,NA,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2019,par,45.411771,NA,NA,Marine Abiotic,Marine,hamakualoa,Hāmākualoa,maui,Maui
+WAILUKU,2013,par,43.37271966,NA,NA,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2016,par,41.89150059,NA,NA,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,par,45.67089734,NA,NA,Marine Abiotic,Marine,wailuku,Wailuku,maui,Maui
+KOOLAU MAU,2013,par,41.38828951,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2016,par,39.66323422,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2019,par,43.06692468,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,maui,Maui
+LAHAINA,2013,par,45.10259482,NA,NA,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2016,par,44.61457573,NA,NA,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,par,47.14891385,NA,NA,Marine Abiotic,Marine,lahaina,Lāhainā,maui,Maui
+KOOLAU LAN,2013,par,45.17960824,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2016,par,44.91340528,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,par,47.51254987,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KEALALOLOA,2013,par,45.08116686,NA,NA,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2016,par,44.14033447,NA,NA,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,par,47.14248694,NA,NA,Marine Abiotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KULA,2013,par,44.02458954,NA,NA,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KULA,2016,par,43.06261525,NA,NA,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KULA,2019,par,46.49759106,NA,NA,Marine Abiotic,Marine,kula,Kula,maui,Maui
+KONA LAN,2013,par,42.38388966,NA,NA,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+KONA LAN,2016,par,42.66857728,NA,NA,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+KONA LAN,2019,par,45.33008855,NA,NA,Marine Abiotic,Marine,kona,Kona,lanai,Lāna‘i
+HANA,2013,par,42.08000329,NA,NA,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+HANA,2016,par,40.74199222,NA,NA,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+HANA,2019,par,43.91935255,NA,NA,Marine Abiotic,Marine,hana,Hāna,maui,Maui
+KIPAHULU,2013,par,42.71565571,NA,NA,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2016,par,41.977694,NA,NA,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2019,par,44.26755507,NA,NA,Marine Abiotic,Marine,kipahulu,Kīpahulu,maui,Maui
+KAUPO,2013,par,44.46018609,NA,NA,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAUPO,2016,par,44.17656955,NA,NA,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAUPO,2019,par,46.31115276,NA,NA,Marine Abiotic,Marine,kaupo,Kaupō,maui,Maui
+KAHIKINUI,2013,par,45.13561829,NA,NA,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2016,par,44.94350076,NA,NA,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2019,par,47.42632241,NA,NA,Marine Abiotic,Marine,kahikinui,Kahikinui,maui,Maui
+KOOLAU KAH,2013,par,41.44946942,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2016,par,39.73603845,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2019,par,43.70132223,NA,NA,Marine Abiotic,Marine,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+HONUAULA,2013,par,40.5495754,NA,NA,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2016,par,39.47372692,NA,NA,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2019,par,42.3883501,NA,NA,Marine Abiotic,Marine,honuaula,Honua‘ula,maui,Maui
+KONA KAH,2013,par,44.92538996,NA,NA,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2016,par,44.1545467,NA,NA,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,par,47.02353762,NA,NA,Marine Abiotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+HAMAKUA,2013,par,41.27798251,NA,NA,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2016,par,40.48876377,NA,NA,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,par,43.24329648,NA,NA,Marine Abiotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+KOHALA,2013,par,44.66569811,NA,NA,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2016,par,44.47914416,NA,NA,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,par,47.32036347,NA,NA,Marine Abiotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+HILO,2013,par,40.3457784,NA,NA,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2016,par,40.10574081,NA,NA,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,par,43.25779955,NA,NA,Marine Abiotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+PUNA HAW,2013,par,42.38251049,NA,NA,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2016,par,42.244139,NA,NA,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,par,44.9608285,NA,NA,Marine Abiotic,Marine,puna,Puna,hawaii,Hawai‘i
+KONA HAW,2013,par,41.36731623,NA,NA,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2016,par,40.55709068,NA,NA,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2019,par,45.45818503,NA,NA,Marine Abiotic,Marine,kona,Kona,hawaii,Hawai‘i
+KAU,2013,par,39.98919726,NA,NA,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2016,par,39.74543965,NA,NA,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2019,par,43.71236249,NA,NA,Marine Abiotic,Marine,kau,Kaʻū,hawaii,Hawai‘i
+HILO,2013,piscivore_biomass,0,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,piscivore_biomass,1.15306310960218,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+KONA OAH,2013,piscivore_biomass,13.7179486295451,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,piscivore_biomass,3.8412828048446,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KOOLAULOA,2013,piscivore_biomass,0.174036245557213,NA,NA,Marine Biotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,piscivore_biomass,2.27025697903542,NA,NA,Marine Biotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+PUNA NIH,2013,piscivore_biomass,1.88445482692965,NA,NA,Marine Biotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,piscivore_biomass,8.00797517546449,NA,NA,Marine Biotic,Marine,puna,Puna,niihau,Ni‘ihau
+WAIANAE,2013,piscivore_biomass,0.316349694577011,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,piscivore_biomass,4.12824589578615,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+HAMAKUAPOKO,2013,planktivore_biomass,4.44033836133979,NA,NA,Marine Biotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,planktivore_biomass,0.783638726888883,NA,NA,Marine Biotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HILO,2013,planktivore_biomass,0.140940525407468,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,planktivore_biomass,1.32515385656188,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+KONA OAH,2013,planktivore_biomass,4.60979560165082,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,planktivore_biomass,0.20430719598435,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KOOLAU KAU,2013,planktivore_biomass,8.29305573481734,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,planktivore_biomass,1.15080341559469,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KONA OAH,2013,primary_consumer_biomass,9.78358213478946,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,primary_consumer_biomass,0.436577429799315,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+WAIALUA,2013,primary_consumer_biomass,3.89260742408833,NA,NA,Marine Biotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,primary_consumer_biomass,7.82962183790441,NA,NA,Marine Biotic,Marine,waialua,Waialua,oahu,O‘ahu
+HAMAKUAPOKO,2013,coral_cover,15.3185557122615,NA,NA,Marine Biotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,coral_cover,8.28067069704944,NA,NA,Marine Biotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HANA,2013,coral_cover,34.1444842673252,NA,NA,Marine Biotic,Marine,hana,Hāna,maui,Maui
+HANA,2019,coral_cover,7.15406107043916,NA,NA,Marine Biotic,Marine,hana,Hāna,maui,Maui
+HILO,2013,coral_cover,4.88450808546667,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,coral_cover,0.473089841212344,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+KAANAPALI,2013,coral_cover,15.38440804096,NA,NA,Marine Biotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,coral_cover,5.69925344093562,NA,NA,Marine Biotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KOOLAU MOL,2013,coral_cover,58.9473684210526,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,coral_cover,24.2579956677473,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+PUNA HAW,2013,coral_cover,3.4146828739104,NA,NA,Marine Biotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,coral_cover,1.44546067159784,NA,NA,Marine Biotic,Marine,puna,Puna,hawaii,Hawai‘i
+WAIALUA,2013,coral_cover,4.03080142158582,NA,NA,Marine Biotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,coral_cover,1.6482228159003,NA,NA,Marine Biotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAILUKU,2013,coral_cover,25.0214229208105,NA,NA,Marine Biotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,coral_cover,3.97942705959248,NA,NA,Marine Biotic,Marine,wailuku,Wailuku,maui,Maui
+HALELEA,2013,coral_diversity,1.32858099392714,NA,NA,Marine Biotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,coral_diversity,2.21240458250037,NA,NA,Marine Biotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HANA,2013,coral_diversity,2.35620293857322,NA,NA,Marine Biotic,Marine,hana,Hāna,maui,Maui
+HANA,2019,coral_diversity,3.5738548871006,NA,NA,Marine Biotic,Marine,hana,Hāna,maui,Maui
+HILO,2013,coral_diversity,1.81452731962107,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,coral_diversity,1,NA,NA,Marine Biotic,Marine,hilo,Hilo,hawaii,Hawai‘i
+KEALALOLOA,2013,coral_diversity,2.1385188551122,NA,NA,Marine Biotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,coral_diversity,2.71507266050363,NA,NA,Marine Biotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KONA KAH,2013,coral_diversity,2.22910445600494,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,coral_diversity,3.45723028350762,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA OAH,2013,coral_diversity,1.43101064938976,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,coral_diversity,1,NA,NA,Marine Biotic,Marine,kona,Kona,oahu,O‘ahu
+KOOLAU MOL,2013,coral_diversity,4.37354800518183,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,coral_diversity,3.29933098935644,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+LAHAINA,2013,coral_diversity,2.6382927326356,NA,NA,Marine Biotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,coral_diversity,4.59182062576723,NA,NA,Marine Biotic,Marine,lahaina,Lāhainā,maui,Maui
+WAIANAE,2013,coral_diversity,2.00479625647911,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,coral_diversity,2.76797851690495,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+HAMAKUA,2013,adult_coral_density,9.3219172987446,NA,NA,Marine Biotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,adult_coral_density,3.45530067158498,NA,NA,Marine Biotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+KEALALOLOA,2013,adult_coral_density,13.9408837575022,NA,NA,Marine Biotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,adult_coral_density,8.58978831570649,NA,NA,Marine Biotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KOHALA,2013,adult_coral_density,13.2,NA,NA,Marine Biotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,adult_coral_density,2.60801477122247,NA,NA,Marine Biotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KONA KAH,2013,adult_coral_density,18.1751967749141,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,adult_coral_density,10.0300618029238,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA MOL,2013,adult_coral_density,13.7,NA,NA,Marine Biotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,adult_coral_density,8.61348184885356,NA,NA,Marine Biotic,Marine,kona,Kona,molokai,Moloka‘i
+KOOLAU MOL,2013,adult_coral_density,24.7736757624398,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,adult_coral_density,15.9231414013372,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+MANA,2013,adult_coral_density,0.5,NA,NA,Marine Biotic,Marine,mana,Mana,kauai,Kaua'i
+MANA,2019,adult_coral_density,5.83206153619056,NA,NA,Marine Biotic,Marine,mana,Mana,kauai,Kaua'i
+WAILUKU,2013,adult_coral_density,9.20669679423198,NA,NA,Marine Biotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,adult_coral_density,3.09914769751104,NA,NA,Marine Biotic,Marine,wailuku,Wailuku,maui,Maui
+EWA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,juvenile_coral_density,12.4140846149589,NA,NA,Marine Biotic,Marine,ewa,‘Ewa,oahu,O‘ahu
+HALELEA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,juvenile_coral_density,7.64900677122321,NA,NA,Marine Biotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HAMAKUA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,juvenile_coral_density,44.2726545010808,NA,NA,Marine Biotic,Marine,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUAPOKO,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,juvenile_coral_density,9.13330464338084,NA,NA,Marine Biotic,Marine,hamakuapoko,Hāmākuapoko,maui,Maui
+KAANAPALI,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,juvenile_coral_density,17.5168126358334,NA,NA,Marine Biotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KEALALOLOA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,juvenile_coral_density,18.60374217478,NA,NA,Marine Biotic,Marine,kealaloloa,Kealaloloa,maui,Maui
+KONA KAH,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,juvenile_coral_density,5.3525116698026,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAU,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,juvenile_coral_density,15.3820943273218,NA,NA,Marine Biotic,Marine,kona,Kona,kauai,Kaua‘i
+KONA MOL,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,juvenile_coral_density,6.03354137758473,NA,NA,Marine Biotic,Marine,kona,Kona,molokai,Moloka‘i
+KOOLAU KAU,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,juvenile_coral_density,25.8332592722739,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU LAN,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,juvenile_coral_density,3.59423231872435,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU MOL,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,juvenile_coral_density,13.8045071180125,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAULOA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,juvenile_coral_density,11.2746443165723,NA,NA,Marine Biotic,Marine,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAUPOKO,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,juvenile_coral_density,21.7534527902404,NA,NA,Marine Biotic,Marine,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+LAHAINA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,juvenile_coral_density,9.04650507180792,NA,NA,Marine Biotic,Marine,lahaina,Lāhainā,maui,Maui
+PALAAU,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,juvenile_coral_density,8.64520515518253,NA,NA,Marine Biotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,juvenile_coral_density,9.44553274496309,NA,NA,Marine Biotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA KAU,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,juvenile_coral_density,2.24509176234463,NA,NA,Marine Biotic,Marine,puna,Puna,kauai,Kaua‘i
+PUNA NIH,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,juvenile_coral_density,1.97595176202951,NA,NA,Marine Biotic,Marine,puna,Puna,niihau,Ni‘ihau
+WAIALUA,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,juvenile_coral_density,7.74509318732496,NA,NA,Marine Biotic,Marine,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,juvenile_coral_density,14.753717383138,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAILUKU,2013,juvenile_coral_density,0,NA,NA,Marine Biotic,Marine,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,juvenile_coral_density,7.91433359229541,NA,NA,Marine Biotic,Marine,wailuku,Wailuku,maui,Maui
+HALELEA,2013,disease_prevalence,0.858901003887485,NA,NA,Marine Biotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,disease_prevalence,4.64103352712863,NA,NA,Marine Biotic,Marine,halelea,Halele‘a,kauai,Kaua‘i
+KAANAPALI,2013,disease_prevalence,0.51850121843199,NA,NA,Marine Biotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,disease_prevalence,5.26535513467829,NA,NA,Marine Biotic,Marine,kaanapali,Kāʻanapali,maui,Maui
+KOHALA,2013,disease_prevalence,0,NA,NA,Marine Biotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,disease_prevalence,5.22196215942746,NA,NA,Marine Biotic,Marine,kohala,Kohala,hawaii,Hawai‘i
+KONA KAH,2013,disease_prevalence,2.55630537397997,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,disease_prevalence,1.12277747167852,NA,NA,Marine Biotic,Marine,kona,Kona,kahoolawe,Kaho‘olawe
+KOOLAU MOL,2013,disease_prevalence,0.638297872340425,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,disease_prevalence,1.38571173322056,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU NIH,2013,disease_prevalence,0.407071861927189,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,disease_prevalence,5.98112072713235,NA,NA,Marine Biotic,Marine,koolau,Ko‘olau,niihau,Ni‘ihau
+LAHAINA,2013,disease_prevalence,3.75686141841267,NA,NA,Marine Biotic,Marine,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,disease_prevalence,0.263732024880434,NA,NA,Marine Biotic,Marine,lahaina,Lāhainā,maui,Maui
+PALAAU,2013,disease_prevalence,1.80995442671545,NA,NA,Marine Biotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,disease_prevalence,0,NA,NA,Marine Biotic,Marine,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2013,disease_prevalence,0.590942385832531,NA,NA,Marine Biotic,Marine,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,disease_prevalence,4.53506483766863,NA,NA,Marine Biotic,Marine,puna,Puna,hawaii,Hawai‘i
+WAIANAE,2013,disease_prevalence,0,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,disease_prevalence,2.47895636792117,NA,NA,Marine Biotic,Marine,waianae,Wa‘ianae,oahu,O‘ahu
+EWA,2013,ndvi,0.524935892057705,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,ndvi,0.546682083664389,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+HALELEA,2013,ndvi,0.511731275395648,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,ndvi,0.529946114730653,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HAMAKUA,2013,ndvi,0.536680133699898,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,ndvi,0.583582680469481,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUALOA,2013,ndvi,0.623069821090159,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2019,ndvi,0.648681634863252,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUAPOKO,2013,ndvi,0.566571454803299,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,ndvi,0.435183039841446,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HANA,2013,ndvi,0.400707588494859,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HANA,2019,ndvi,0.535578871806416,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HILO,2013,ndvi,0.574758162513512,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,ndvi,0.596549727232198,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HONUAULA,2013,ndvi,0.388510744563821,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2019,ndvi,0.458318011326518,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+KAANAPALI,2013,ndvi,0.537361660256448,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,ndvi,0.604922011185268,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAHIKINUI,2013,ndvi,0.370086602623334,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2019,ndvi,0.387629976119851,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KALUAKOI,2013,ndvi,0.367819084452056,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2019,ndvi,0.384367064286597,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KAU,2013,ndvi,0.471595704780738,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2019,ndvi,0.491399610524039,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAUPO,2013,ndvi,0.51622368405371,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KAUPO,2019,ndvi,0.54069622956283,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KEALALOLOA,2013,ndvi,0.470038785555379,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,ndvi,0.395782125024277,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KIPAHULU,2013,ndvi,0.497756497377058,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2019,ndvi,0.545679473224217,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KOHALA,2013,ndvi,0.407506265792582,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,ndvi,0.494068157719335,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KONA HAW,2013,ndvi,0.363642270468069,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2019,ndvi,0.462443039951798,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA KAH,2013,ndvi,0.117916406837011,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,ndvi,0.199449284014867,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAU,2013,ndvi,0.538676691186857,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,ndvi,0.567538498839098,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA LAN,2013,ndvi,0.377687472919646,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA LAN,2019,ndvi,0.433045139087522,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA MOL,2013,ndvi,0.379295049268441,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,ndvi,0.470701654307255,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA NIH,2013,ndvi,NA,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2019,ndvi,NA,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA OAH,2013,ndvi,0.55970946370698,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,ndvi,0.593030824637604,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KOOLAU KAH,2013,ndvi,0.129413635947643,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2019,ndvi,0.210159891744796,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAU,2013,ndvi,0.567510941897523,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,ndvi,0.575971537577026,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU LAN,2013,ndvi,0.305047638942839,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,ndvi,0.377900500622385,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU MAU,2013,ndvi,0.519191756632884,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2019,ndvi,0.570644883424263,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MOL,2013,ndvi,0.474743467685533,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,ndvi,0.567160707488038,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU NIH,2013,ndvi,NA,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,ndvi,NA,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAULOA,2013,ndvi,0.49642336470515,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,ndvi,0.534790256568144,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAUPOKO,2013,ndvi,0.422029278919062,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,ndvi,0.45795193603563,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KULA,2013,ndvi,0.378283471636131,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+KULA,2019,ndvi,0.396825092121758,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+LAHAINA,2013,ndvi,0.411957110224863,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,ndvi,0.458080704927874,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+MANA,2013,ndvi,0.403740280659188,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+MANA,2019,ndvi,0.473039034575454,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+NAPALI,2013,ndvi,0.497943960659306,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2019,ndvi,0.509044326434133,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+PALAAU,2013,ndvi,0.43282190652263,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,ndvi,0.477964468236312,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2013,ndvi,0.542050074612591,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,ndvi,0.559599969741512,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA KAU,2013,ndvi,0.562234527306453,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,ndvi,0.591282454667444,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA NIH,2013,ndvi,NA,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,ndvi,NA,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+WAIALUA,2013,ndvi,0.551742682423936,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,ndvi,0.598751397187351,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,ndvi,0.478050811706815,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,ndvi,0.497176397496336,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAILUKU,2013,ndvi,0.435750313369941,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,ndvi,0.505045467892014,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+EWA,2013,mean_rainfall,82.26,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,mean_rainfall,60.66,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+HALELEA,2013,mean_rainfall,192.07,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,mean_rainfall,216.96,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HAMAKUA,2013,mean_rainfall,100.85,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,mean_rainfall,98.83,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUALOA,2013,mean_rainfall,108.97,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2019,mean_rainfall,119.42,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUAPOKO,2013,mean_rainfall,7.9,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,mean_rainfall,3.65,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HANA,2013,mean_rainfall,116.31,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HANA,2019,mean_rainfall,121.51,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HILO,2013,mean_rainfall,124.99,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,mean_rainfall,144.56,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HONUAULA,2013,mean_rainfall,1.02,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2019,mean_rainfall,1.51,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+KAANAPALI,2013,mean_rainfall,128.82,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,mean_rainfall,109.54,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAHIKINUI,2013,mean_rainfall,0.96,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2019,mean_rainfall,1.16,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KALUAKOI,2013,mean_rainfall,0.7,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2019,mean_rainfall,1.54,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KAU,2013,mean_rainfall,21.22,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2019,mean_rainfall,37.67,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAUPO,2013,mean_rainfall,14.53,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KAUPO,2019,mean_rainfall,14.78,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KEALALOLOA,2013,mean_rainfall,31.73,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,mean_rainfall,25.28,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KIPAHULU,2013,mean_rainfall,225.06,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2019,mean_rainfall,229.96,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KOHALA,2013,mean_rainfall,8.36,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,mean_rainfall,10.52,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KONA HAW,2013,mean_rainfall,10.65,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2019,mean_rainfall,22.69,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA KAH,2013,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAU,2013,mean_rainfall,87.7,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,mean_rainfall,106.7,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA LAN,2013,mean_rainfall,2.2,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA LAN,2019,mean_rainfall,4.17,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA MOL,2013,mean_rainfall,52,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,mean_rainfall,52.63,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA NIH,2013,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2019,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA OAH,2013,mean_rainfall,80.38,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,mean_rainfall,71.12,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KOOLAU KAH,2013,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2019,mean_rainfall,0.02,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAU,2013,mean_rainfall,86.36,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,mean_rainfall,101.26,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU LAN,2013,mean_rainfall,3.12,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,mean_rainfall,5.23,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU MAU,2013,mean_rainfall,163.01,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2019,mean_rainfall,194.98,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MOL,2013,mean_rainfall,20.22,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,mean_rainfall,23.56,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU NIH,2013,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAULOA,2013,mean_rainfall,154.19,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,mean_rainfall,134.29,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAUPOKO,2013,mean_rainfall,60.83,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,mean_rainfall,52.03,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KULA,2013,mean_rainfall,12.94,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+KULA,2019,mean_rainfall,11.69,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+LAHAINA,2013,mean_rainfall,58.84,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,mean_rainfall,56.42,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+MANA,2013,mean_rainfall,19.23,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+MANA,2019,mean_rainfall,22.19,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+NAPALI,2013,mean_rainfall,75.69,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2019,mean_rainfall,96.17,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+PALAAU,2013,mean_rainfall,17.45,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,mean_rainfall,23.87,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2013,mean_rainfall,119.06,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,mean_rainfall,125.5,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA KAU,2013,mean_rainfall,103.92,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,mean_rainfall,124.82,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA NIH,2013,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,mean_rainfall,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+WAIALUA,2013,mean_rainfall,127.33,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,mean_rainfall,110.51,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,mean_rainfall,31.65,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,mean_rainfall,28.04,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAILUKU,2013,mean_rainfall,77.66,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,mean_rainfall,66.23,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+EWA,2013,mean_temperature,22.0266666666667,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+EWA,2019,mean_temperature,22.6816666666667,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+HALELEA,2013,mean_temperature,20.7966666666667,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HALELEA,2019,mean_temperature,21.785,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HAMAKUA,2013,mean_temperature,20.6,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUA,2019,mean_temperature,21.3591666666667,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUALOA,2013,mean_temperature,21.3666666666667,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUALOA,2019,mean_temperature,21.9866666666667,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUAPOKO,2013,mean_temperature,20.8816666666667,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HAMAKUAPOKO,2019,mean_temperature,21.4625,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HANA,2013,mean_temperature,22.5916666666667,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HANA,2019,mean_temperature,23.2483333333333,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HILO,2013,mean_temperature,18.585,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HILO,2019,mean_temperature,19.3425,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HONUAULA,2013,mean_temperature,20.125,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+HONUAULA,2019,mean_temperature,20.7033333333333,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+KAANAPALI,2013,mean_temperature,20.9283333333333,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAANAPALI,2019,mean_temperature,21.5325,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAHIKINUI,2013,mean_temperature,14.6708333333333,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KAHIKINUI,2019,mean_temperature,15.0766666666667,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KALUAKOI,2013,mean_temperature,24.2108333333333,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KALUAKOI,2019,mean_temperature,24.9208333333333,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KAU,2013,mean_temperature,17.3241666666667,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAU,2019,mean_temperature,18.0841666666667,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAUPO,2013,mean_temperature,20.435,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KAUPO,2019,mean_temperature,21.0241666666667,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KEALALOLOA,2013,mean_temperature,20.0383333333333,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KEALALOLOA,2019,mean_temperature,20.6141666666667,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KIPAHULU,2013,mean_temperature,19.1808333333333,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KIPAHULU,2019,mean_temperature,19.73,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KOHALA,2013,mean_temperature,20.0008333333333,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KOHALA,2019,mean_temperature,20.7591666666667,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KONA HAW,2013,mean_temperature,18.1983333333333,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA HAW,2019,mean_temperature,18.9583333333333,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA KAH,2013,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAH,2019,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAU,2013,mean_temperature,18.955,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA KAU,2019,mean_temperature,19.7483333333333,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA LAN,2013,mean_temperature,20.3216666666667,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA LAN,2019,mean_temperature,20.905,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA MOL,2013,mean_temperature,20.3558333333333,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA MOL,2019,mean_temperature,20.9391666666667,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA NIH,2013,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA NIH,2019,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA OAH,2013,mean_temperature,22.1533333333333,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KONA OAH,2019,mean_temperature,22.8275,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KOOLAU KAH,2013,mean_temperature,24.1775,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAH,2019,mean_temperature,24.8416666666667,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAU,2013,mean_temperature,22.5766666666667,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU KAU,2019,mean_temperature,23.7583333333333,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU LAN,2013,mean_temperature,21.8675,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU LAN,2019,mean_temperature,22.485,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU MAU,2013,mean_temperature,21.3983333333333,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MAU,2019,mean_temperature,22.0183333333333,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MOL,2013,mean_temperature,21.5825,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU MOL,2019,mean_temperature,22.2083333333333,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU NIH,2013,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAU NIH,2019,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAULOA,2013,mean_temperature,22.6258333333333,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAULOA,2019,mean_temperature,23.3725,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAUPOKO,2013,mean_temperature,23.3616666666667,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KOOLAUPOKO,2019,mean_temperature,24.2166666666667,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KULA,2013,mean_temperature,15.6208333333333,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+KULA,2019,mean_temperature,16.0558333333333,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+LAHAINA,2013,mean_temperature,18.5483333333333,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+LAHAINA,2019,mean_temperature,19.075,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+MANA,2013,mean_temperature,19.4941666666667,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+MANA,2019,mean_temperature,20.3458333333333,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+NAPALI,2013,mean_temperature,18.5408333333333,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+NAPALI,2019,mean_temperature,19.2875,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+PALAAU,2013,mean_temperature,21.2116666666667,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PALAAU,2019,mean_temperature,21.8266666666667,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2013,mean_temperature,20.1675,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA HAW,2019,mean_temperature,20.925,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA KAU,2013,mean_temperature,22.1308333333333,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA KAU,2019,mean_temperature,23.265,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA NIH,2013,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+PUNA NIH,2019,mean_temperature,NA,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+WAIALUA,2013,mean_temperature,21.4716666666667,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIALUA,2019,mean_temperature,22.0416666666667,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,mean_temperature,21.5366666666667,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAIANAE,2019,mean_temperature,22.1183333333333,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAILUKU,2013,mean_temperature,21.6008333333333,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+WAILUKU,2019,mean_temperature,22.2258333333333,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+EWA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+HALELEA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HAMAKUA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUALOA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUAPOKO,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HANA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HILO,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HONUAULA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+KAANAPALI,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAHIKINUI,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KALUAKOI,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KAU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAUPO,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KEALALOLOA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KIPAHULU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KOHALA,2013,burnt_area,2.92,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KONA HAW,2013,burnt_area,2.51,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA KAH,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA LAN,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA MOL,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA NIH,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA OAH,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KOOLAU KAH,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU LAN,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU MAU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MOL,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU NIH,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAULOA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAUPOKO,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KULA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+LAHAINA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+MANA,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+NAPALI,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+PALAAU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA KAU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA NIH,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+WAIALUA,2013,burnt_area,1.04,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2013,burnt_area,0.51,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAILUKU,2013,burnt_area,0,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui
+EWA,2019,burnt_area,0.02,NA,NA,Terrestrial,Terrestrial,ewa,‘Ewa,oahu,O‘ahu
+HALELEA,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,halelea,Halele‘a,kauai,Kaua‘i
+HAMAKUA,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hamakua,Hāmākua,hawaii,Hawai‘i
+HAMAKUALOA,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hamakualoa,Hāmākualoa,maui,Maui
+HAMAKUAPOKO,2019,burnt_area,1.04,NA,NA,Terrestrial,Terrestrial,hamakuapoko,Hāmākuapoko,maui,Maui
+HANA,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,hana,Hāna,maui,Maui
+HILO,2019,burnt_area,0.92,NA,NA,Terrestrial,Terrestrial,hilo,Hilo,hawaii,Hawai‘i
+HONUAULA,2019,burnt_area,0.66,NA,NA,Terrestrial,Terrestrial,honuaula,Honua‘ula,maui,Maui
+KAANAPALI,2019,burnt_area,3.22,NA,NA,Terrestrial,Terrestrial,kaanapali,Kāʻanapali,maui,Maui
+KAHIKINUI,2019,burnt_area,0.03,NA,NA,Terrestrial,Terrestrial,kahikinui,Kahikinui,maui,Maui
+KALUAKOI,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kaluakoi,Kaluako‘i,molokai,Moloka‘i
+KAU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kau,Kaʻū,hawaii,Hawai‘i
+KAUPO,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kaupo,Kaupō,maui,Maui
+KEALALOLOA,2019,burnt_area,20.57,NA,NA,Terrestrial,Terrestrial,kealaloloa,Kealaloloa,maui,Maui
+KIPAHULU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kipahulu,Kīpahulu,maui,Maui
+KOHALA,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kohala,Kohala,hawaii,Hawai‘i
+KONA HAW,2019,burnt_area,0.05,NA,NA,Terrestrial,Terrestrial,kona,Kona,hawaii,Hawai‘i
+KONA KAH,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,kahoolawe,Kaho‘olawe
+KONA KAU,2019,burnt_area,9.79,NA,NA,Terrestrial,Terrestrial,kona,Kona,kauai,Kaua‘i
+KONA LAN,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,lanai,Lāna‘i
+KONA MOL,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,molokai,Moloka‘i
+KONA NIH,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,kona,Kona,niihau,Ni‘ihau
+KONA OAH,2019,burnt_area,0.04,NA,NA,Terrestrial,Terrestrial,kona,Kona,oahu,O‘ahu
+KOOLAU KAH,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kahoolawe,Kaho‘olawe
+KOOLAU KAU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,kauai,Kaua‘i
+KOOLAU LAN,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,lanai,Lāna‘i
+KOOLAU MAU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,maui,Maui
+KOOLAU MOL,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,molokai,Moloka‘i
+KOOLAU NIH,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolau,Ko‘olau,niihau,Ni‘ihau
+KOOLAULOA,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolauloa,Ko‘olauloa,oahu,O‘ahu
+KOOLAUPOKO,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,koolaupoko,Ko‘olaupoko,oahu,O‘ahu
+KULA,2019,burnt_area,4.78,NA,NA,Terrestrial,Terrestrial,kula,Kula,maui,Maui
+LAHAINA,2019,burnt_area,0.85,NA,NA,Terrestrial,Terrestrial,lahaina,Lāhainā,maui,Maui
+MANA,2019,burnt_area,0.28,NA,NA,Terrestrial,Terrestrial,mana,Mana,kauai,Kaua'i
+NAPALI,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,napali,Nāpali,kauai,Kaua‘i
+PALAAU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,palaau,Pālāʻau,molokai,Moloka‘i
+PUNA HAW,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,hawaii,Hawai‘i
+PUNA KAU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,kauai,Kaua‘i
+PUNA NIH,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,puna,Puna,niihau,Ni‘ihau
+WAIALUA,2019,burnt_area,0.87,NA,NA,Terrestrial,Terrestrial,waialua,Waialua,oahu,O‘ahu
+WAIANAE,2019,burnt_area,1.63,NA,NA,Terrestrial,Terrestrial,waianae,Wa‘ianae,oahu,O‘ahu
+WAILUKU,2019,burnt_area,0,NA,NA,Terrestrial,Terrestrial,wailuku,Wailuku,maui,Maui

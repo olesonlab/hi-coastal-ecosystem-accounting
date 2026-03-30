@@ -12,19 +12,13 @@ box::use(
   app/view/layout/nav_model[
     HOME,
     EXTENTS,
-    CONDITIONS,
-    USES_FISHERIES_VALUATION,
-    USES_RECREATION
+    CONDITIONS
   ],
   app/view/tabs/home/home_page,
   app/view/tabs/extents/extents_page,
   app/view/tabs/conditions/conditions_page,
-  app/view/tabs/uses/fisheries_valuation/fisheries_valuation_page,
-  app/view/tabs/uses/recreation/recreation_page,
   app/view/controls/controls_extents,
-  app/view/controls/controls_conditions,
-  app/view/controls/controls_uses_fisheries_valuation,
-  app/view/controls/controls_uses_recreation
+  app/view/controls/controls_conditions
 )
 
 #' @export
@@ -32,9 +26,7 @@ page_modules_by_scope <- function() {
   list(
     home = home_page,
     extents = extents_page,
-    conditions = conditions_page,
-    uses_fisheries_valuation = fisheries_valuation_page,
-    uses_recreation = recreation_page
+    conditions = conditions_page
   )
 }
 
@@ -43,8 +35,6 @@ control_modules_by_scope <- function() {
   list(
     home = NULL,
     extents = controls_extents,
-    conditions = controls_conditions,
-    uses_fisheries_valuation = controls_uses_fisheries_valuation,
-    uses_recreation = controls_uses_recreation
+    conditions = controls_conditions
   )
 }

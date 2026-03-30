@@ -29,9 +29,7 @@ box::use(
   app/view/layout/nav_model[
     HOME,
     EXTENTS,
-    CONDITIONS,
-    USES_FISHERIES_VALUATION,
-    USES_RECREATION
+    CONDITIONS
   ]
 )
 
@@ -56,16 +54,6 @@ ui <- function(id) {
       "Ecosystem Conditions",
       tabName = CONDITIONS,
       icon = icon("heartbeat")
-    ),
-    menuItem(
-      "Fisheries Valuation",
-      tabName = USES_FISHERIES_VALUATION,
-      icon = icon("fish")
-    ),
-    menuItem(
-      "Recreation Services",
-      tabName = USES_RECREATION,
-      icon = icon("umbrella-beach")
     )
   )
 }

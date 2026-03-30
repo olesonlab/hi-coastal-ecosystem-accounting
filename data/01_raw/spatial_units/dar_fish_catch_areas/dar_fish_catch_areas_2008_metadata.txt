@@ -1,0 +1,116 @@
+Layer Name:		Fishchart2008.shp
+
+Layer Type:	      	Polygon
+
+Date:			March 4, 2008
+
+Status:			Editing completed 3/4/08 should be checked through
+			usage.  Please report any errors to contact person.
+
+Geog. Extent:		Hawaiian Archipelago Islands.  Region within the rectangle
+                        encompassing from 32 degrees N Lat by 178 degrees W Long
+                        (3 degrees north and west of Kure Atoll) to 10 degrees N Lat
+                        by 150 degrees W Long (9 degrees south and 5 degrees east
+                        of the Island of Hawaii)
+
+Projection:	      	None (Geographic Coordinates - Degrees, Minutes, Seconds)
+
+Datum:			North American Datum 1983 (Zone 4)
+
+Description:		State of Hawaii Commercial Fish Catch Statistical Areas,
+                        including a more detailed coastline for the Main Hawaiian
+                        Islands, recognized islets and the Northwestern Hawaiian
+                        Islands (major natural and manmade features throughout
+                        the Hawaiian Archipelago).
+		
+Source:			Hawaii Department of Land & Natural Resource's
+			Division of Aquatic Resources (DLNR-DAR).
+
+History:		Input via coordinates (Grid) and digitized by DAR staff in
+			1992 from a chart produced for DLNR By Manoa Mapworks in 1990
+			(revised in 1993) and distributed to commercial fishers for
+			reporting purposes with their Commercial Fish Catch Reports.
+                        Original layer created using "GenCoast" was highly inaccurate
+                        and covered only the Main Hawaiian Islands (MHI, the eight
+                        large islands between Ka'ula Rock and the Island of Hawaii).
+                        The layer created in 1993 had been revised around 2000,
+                        incorporating several errors, which had to be corrected
+                        (among other things, areas south of Molokai and Ni'ihau
+                        were incorrect, Ka'ula rock was distorted and the offset
+                        of inshore areas in the MHI was increased considerably).
+                        The coastline was upgraded by selectively deleting the MHI
+                        and replacing it with the higher resolution
+                        (Hawaii) Office of Planning's (OP) "Coastline" layer.
+                        OP's "Islets" layer was added and additional corrections
+                        were based on aerial imagery from the DOQQ's (ref).
+                        To this Northwestern land features (islands, shoals, reefs
+                        and atolls NW of and including Ka'ula Rock)
+                        were added from U.S. Department of Commerce, National Oceanic
+                        and Atmospheric Administration (NOAA),
+                        National Ocean Service (NOS), National Geodetic Survey (NGS)
+			Publication_Date:20011002. Some of the NWHI shoreline had
+                        to be corrected using satellite imagery.
+                        Layer created by M.K. Lowe (2007).  Commercial fishers in Hawaii
+                        are required by Statute to provide monthly reports of their catch.
+                        These data are reported by species, geartype and statistical
+                        area.  The data are confidential and are used for
+			assessment and management purposes only.
+
+
+Attributes:	
+
+	Polygons:
+
+	FID		Polygon Feature. Internal Arc/Info sequential 									polygon number for the coverage.
+
+	SHAPE		Polygon.
+
+	AREA		Area of the polygon (units decimal degrees)
+
+	PERIMETER	Length of the perimeter of the polygon (nautical miles)
+
+	AREA_ID		Numeric ID for the area, as designated on the
+			original DLNR/DAR Commercial Fisheries
+			Statistical Charts (Produced for DLNR by Manoa
+			Mapworks, 1990, 1993).  Numbers range from 100-
+			1000 for the inshore Main Hawaiian Islands (Niihau
+			to Hawaii) and from 10000-30000 for offshore areas
+			and inshore areas in the Hawaiian Archipelago and
+			Northwestern Hawaiian Islands.
+			Additionally:	9995=lagoon, brackish pool
+					9996=manmade onshore feature
+					9997=manmade coastal feature
+					9998=land, islets, exposed rocks
+					9999=exposed reef or intermittent shoreline.
+
+	AREA-A		Alphabetic ID for sub-area designations, used to
+			report bottomfishing locations in the NWHI.
+			Nine letters, ranging from A-I, which follow the
+			area number, subdividing a one-degree square into
+			nine smaller areas
+
+	TYPE		Character variable describing the type of feature
+                        or classifying Fishchart polygons not included in areas
+                        9995-9999 into broad geographic categories
+                        MHI=Main Hawaiian Islands or NWHI=Northwestern Hawaiian Islands
+			and these may be either Coastal, Inshore or Offshore
+
+	CHART		Alphabetic (A-H), designating subsections
+			(different map extents) of the overall chart
+			(greatest extent is shown in Chart A)
+
+	REEFNAME	Named reefs within the NWHI (NW of Ka'ula Rock)
+
+	NOTES		Information on the source for outlines used
+
+	ISLAND		Name of the island, islet or atoll
+			(ref: Mary Kawena Pukui "Place Names of Hawaii"
+				or known Hawaiian name preferred)
+
+Contact:		M. Kimberly Lowe
+			State of Hawaii
+			Department of Land & Natural Resources
+			Division of Aquatic Resources
+			1151 Punchbowl St., Rm 330, Honolulu, HI  96813
+			telephone:	(808) 587-0114.
+			email:		Kimberly.Lowe@hawaii.gov

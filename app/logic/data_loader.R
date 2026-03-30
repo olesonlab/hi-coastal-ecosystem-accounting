@@ -14,16 +14,34 @@
 box::use(
   sf[st_read],
   readr[read_csv],
-  dplyr[filter, pull, distinct, arrange],
+  dplyr[filter, pull, distinct, arrange, select],
   here[here]
 )
+
+# =============================================================================
+# Shared lookups
+# =============================================================================
+
+#' Load moku names lookup (name2 -> ʻōlelo labels)
+#' @return tibble with name2, island_olelo, moku_olelo, moku, island
+#' @export
+load_moku_names_lut <- function() {
+  read_csv(
+    here("data/02_interim/moku_names_lut.csv"),
+    show_col_types = FALSE
+  )
+}
+
+# =============================================================================
+# Extents
+# =============================================================================
 
 #' Load extents data as sf object (with geometry)
 #' @return sf object with extents data
 #' @export
 load_extents_sf <- function() {
   st_read(
-    "data/03_processed/extents/mokus_extents.gpkg",
+    here("data/03_processed/extents/mokus_extents.gpkg"),
     quiet = TRUE
   )
 }
@@ -33,7 +51,7 @@ load_extents_sf <- function() {
 #' @export
 load_extents_df <- function() {
   read_csv(
-    "data/03_processed/extents/mokus_extents.csv",
+    here("data/03_processed/extents/mokus_extents.csv"),
     show_col_types = FALSE
   )
 }
@@ -111,65 +129,82 @@ get_ecosystem_types_for_realm <- function(extents_df, realm) {
     sort()
 }
 
-########################
-# Fisheries Data Loading
-########################
+# =============================================================================
+# Conditions
+# =============================================================================
 
-#' Load commercial fisheries data
-#' @return tibble with commercial fisheries data
+#' Load conditions data as sf object (with geometry, from GeoPackage)
+#' @return sf object with conditions data and moku geometries
 #' @export
-load_fisheries_commercial <- function() {
+load_conditions_sf <- function() {
+  st_read(
+    here("data/03_processed/conditions/mokus_conditions.gpkg"),
+    quiet = TRUE
+  )
+}
+
+#' Load conditions data as tibble (without geometry)
+#' @return tibble with conditions data
+#' @export
+load_conditions_df <- function() {
   read_csv(
-    here("data", "03_processed", "fisheries", "20250619_tidied_comm_ev.csv"),
+    here("data/03_processed/conditions/mokus_conditions.csv"),
     show_col_types = FALSE
   )
 }
 
-#' Load non-commercial fisheries data
-#' @return tibble with non-commercial fisheries data
+#' Load moku geometries (no conditions data — just polygons for map base)
+#' @return sf object with moku polygons
 #' @export
-load_fisheries_noncommercial <- function() {
-  read_csv(
-    here("data", "03_processed", "fisheries", "20250619_tidied_noncomm_ev.csv"),
-    show_col_types = FALSE
+load_moku_sf <- function() {
+  st_read(
+    here("data/02_interim/mokus_combined.gpkg"),
+    quiet = TRUE
   )
 }
 
-#' Get unique filter values from fisheries data
-#' Returns named vectors for filter dropdowns
-#' @param comm_df Commercial fisheries data frame
-#' @param noncomm_df Non-commercial fisheries data frame
-#' @return List of vectors for each filter dimension
+#' Get unique filter values from conditions data
+#' @param conditions_df Conditions data frame
+#' @return List with categories, indicators (nested by category), years, islands, mokus
 #' @export
-get_fisheries_filter_choices <- function(comm_df, noncomm_df) {
-  # Islands: combine county (comm) and island (noncomm)
-  # Commercial uses "county", non-commercial uses "island" - both are Hawaii county names
-  comm_islands <- unique(comm_df$county)
-  noncomm_islands <- unique(noncomm_df$island)
-  islands <- sort(unique(c(comm_islands, noncomm_islands)))
+get_conditions_filter_choices <- function(conditions_df) {
+  categories <- sort(unique(conditions_df$category))
 
-  # Ecosystem types from both datasets
-  ecosystem_types <- sort(unique(c(
-    unique(comm_df$ecosystem_type),
-    unique(noncomm_df$ecosystem_type)
-  )))
+  # Indicators nested by category
+  indicators_by_category <- lapply(
+    stats::setNames(categories, categories),
+    function(cat) {
+      conditions_df |>
+        filter(category == cat) |>
+        pull(indicator) |>
+        unique() |>
+        sort()
+    }
+  )
 
-  # Species groups from both datasets
-  species_groups <- sort(unique(c(
-    unique(comm_df$species_group),
-    unique(noncomm_df$species_group)
-  )))
-
-  # Years from both datasets
-  years <- sort(unique(c(
-    unique(comm_df$year),
-    unique(noncomm_df$year)
-  )))
+  years   <- sort(unique(conditions_df$year))
+  islands <- sort(unique(conditions_df$island[!is.na(conditions_df$island)]))
 
   list(
-    islands = islands,
-    ecosystem_types = ecosystem_types,
-    species_groups = species_groups,
-    years = years
+    categories = categories,
+    indicators_by_category = indicators_by_category,
+    years = years,
+    islands = islands
   )
+}
+
+#' Get indicators for a given condition category
+#' @param conditions_df Conditions data frame
+#' @param category Selected category
+#' @return Character vector of indicators
+#' @export
+get_indicators_for_category <- function(conditions_df, category) {
+  if (is.null(category) || category == "") {
+    return(sort(unique(conditions_df$indicator)))
+  }
+  conditions_df |>
+    filter(category == !!category) |>
+    pull(indicator) |>
+    unique() |>
+    sort()
 }
