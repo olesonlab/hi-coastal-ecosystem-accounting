@@ -1,20 +1,18 @@
 # Hawaiʻi Coastal Ecosystem Accounting
 
-Natural capital accounts for the Main Hawaiian Islands under the UN SEEA-EA framework—ecosystem extents, conditions, fisheries exchange values, and links to related recreation economics work.
+Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SEEA-EA framework. The work covers **ecosystem extent** and **condition** accounts (ecosystem type areas and biophysical condition indicators by moku; accounting years 2013, 2016, and 2019 where applicable) and **ecosystem services** or **use** accounts: commercial and non-commercial **fisheries exchange values** by species group, county, and island (1997–2022), and **recreation** (non-market values for marine recreational activities).
 
 ## Links
 
-| | |
-|--|--|
-| **Interactive dashboard** | [olesonlab-hi-coastal-ecosystem-accounting.share.connect.posit.cloud](https://olesonlab-hi-coastal-ecosystem-accounting.share.connect.posit.cloud) |
-| **Project website** | [olesonlab-hawaii-coastal-ecosystem-accounting-website.share.connect.posit.cloud](https://olesonlab-hawaii-coastal-ecosystem-accounting-website.share.connect.posit.cloud) |
-| **Recreation account (coral reef welfare)** | [loweas.github.io/CR](https://loweas.github.io/CR/) |
+- **[HCEA Extents and Conditions Dashboard](https://olesonlab-hi-coastal-ecosystem-accounting.share.connect.posit.cloud)**
+- **[HCEA Project Website](https://olesonlab-hawaii-coastal-ecosystem-accounting-website.share.connect.posit.cloud)**
+- **[Recreation Account Website](https://loweas.github.io/CR/)**
 
 ## Repository contents
 
-- **Shiny dashboard** ([Rhino](https://appsilon.github.io/rhino/)) — explores extents, conditions, and fisheries valuation from processed outputs in `data/`.
-- **Data pipeline** — [`targets`](https://books.ropensci.org/targets/) in `_targets.R`; R helpers in `R/`.
-- **Quarto project website** — source in `website/` (documentation-style pages; may be deployed separately).
+- **Shiny dashboard** ([Rhino](https://appsilon.github.io/rhino/)): extent and condition views plus the fisheries exchange value account, from processed outputs in `data/`.
+- **Data pipeline**: [`targets`](https://books.ropensci.org/targets/) in `_targets.R`, R helpers in `R/`.
+- **Quarto project website**: source in `website/` (documentation-style pages; may be deployed separately).
 
 Further technical notes: [documentation/](documentation/) (e.g. [DATA_SOURCES](documentation/DATA_SOURCES.md)).
 
@@ -29,7 +27,7 @@ Rscript -e "targets::tar_make()"   # rebuild processed data (optional if data is
 Rscript -e "rhino::app()"          # run dashboard locally
 ```
 
-Requires **R 4.5+** (see `renv.lock`). Large raw inputs live under `data/01_raw/`; not all paths may be public—see documentation.
+Requires **R 4.5+** (see `renv.lock`). Large raw inputs live under `data/01_raw/`; not every path may be public. See [documentation/](documentation/).
 
 ## License
 
