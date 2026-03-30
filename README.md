@@ -1,6 +1,6 @@
 # Hawaiʻi Coastal Ecosystem Accounting
 
-Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SEEA-EA framework. The work covers **ecosystem extent** and **condition** accounts (ecosystem type areas and biophysical condition indicators by moku; accounting years 2013, 2016, and 2019 where applicable) and **ecosystem services** or **use** accounts: commercial and non-commercial **fisheries exchange values** by species group, county, and island (1997–2022), and **recreation** (non-market values for marine recreational activities).
+Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SEEA-EA framework. The work covers ecosystem extent and condition accounts (ecosystem type areas and biophysical condition indicators by moku; accounting years 2013, 2016, and 2019 where applicable) and ecosystem services or use accounts: commercial and non-commercial fisheries exchange values by species group, county, and island (1997–2022), and recreation (non-market values for marine recreational activities).
 
 ## Links
 
