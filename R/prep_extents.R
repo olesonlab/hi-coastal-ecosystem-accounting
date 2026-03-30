@@ -226,7 +226,11 @@ generate_extent_figs <- function(
   p2 <- make_et_panel("Grass/Shrub")
 
   leg <- cowplot::get_legend(p1 + ggplot2::theme(legend.position = "bottom"))
-  p1  <- p1 + ggplot2::theme(legend.position = "none")
+  p1  <- p1 + ggplot2::theme(
+    legend.position = "none",
+    axis.text.x = ggplot2::element_blank(),
+    axis.ticks.x = ggplot2::element_blank()
+  )
   p2  <- p2 + ggplot2::theme(legend.position = "none")
 
   grid <- cowplot::plot_grid(p1, p2, ncol = 1, align = "v")
@@ -298,7 +302,7 @@ generate_extent_figs <- function(
     ) +
     .theme_account() +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 55, hjust = 1, size = 9)) +
-    ggplot2::guides(fill = ggplot2::guide_legend(nrow = 2))
+    ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1))
 
   comb <- cowplot::plot_grid(p_map, p_bar, nrow = 1, rel_widths = c(1.1, 1), align = "h", axis = "tb")
   .save_account_fig(comb, out_png, width = 14, height = 7, dpi = 300L)
@@ -344,13 +348,13 @@ generate_extent_figs <- function(
         na.value = "transparent"
       ) +
       ggplot2::labs(title = panel_title, x = NULL, y = NULL) +
-      ggplot2::theme_bw(base_size = 12) +
+      ggplot2::theme_bw(base_size = 13) +
       ggplot2::theme(
         axis.text        = ggplot2::element_blank(),
         axis.ticks       = ggplot2::element_blank(),
         panel.grid       = ggplot2::element_blank(),
         panel.border     = ggplot2::element_blank(),
-        plot.title       = ggplot2::element_text(face = "bold", size = 12, hjust = 0.5),
+        plot.title       = ggplot2::element_text(face = "bold", size = 13, hjust = 0.5),
         legend.position  = "none"
       )
   }
@@ -358,7 +362,7 @@ generate_extent_figs <- function(
   # Build shared legend from consistent scale
   legend_plot <- plots[[1]] +
     ggplot2::theme(legend.position = "bottom") +
-    ggplot2::guides(fill = ggplot2::guide_legend(nrow = 2, title.position = "top"))
+    ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "top"))
   shared_leg <- cowplot::get_legend(legend_plot)
 
   title_row <- cowplot::ggdraw() +

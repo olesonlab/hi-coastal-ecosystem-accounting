@@ -1,81 +1,35 @@
-# Hawaiʻi Coastal Ecosystem Accounting Dashboard
+# Hawaiʻi Coastal Ecosystem Accounting
 
-An interactive platform for exploring natural capital accounts across the Main Hawaiian Islands, integrating terrestrial and marine datasets to visualize ecosystem extents, conditions, and service flows.
+Natural capital accounts for the Main Hawaiian Islands under the UN SEEA-EA framework—ecosystem extents, conditions, fisheries exchange values, and links to related recreation economics work.
 
-**[Live Demo](https://olesonlab-mhi-coastal-ecosystem-accounting-dashboard.share.connect.posit.cloud)** · **[Documentation](documentation/)** · **[Oleson Lab](https://www.olesonlab.org/)**
+## Links
 
----
+| | |
+|--|--|
+| **Interactive dashboard** | [olesonlab-hi-coastal-ecosystem-accounting.share.connect.posit.cloud](https://olesonlab-hi-coastal-ecosystem-accounting.share.connect.posit.cloud) |
+| **Project website** | [olesonlab-hawaii-coastal-ecosystem-accounting-website.share.connect.posit.cloud](https://olesonlab-hawaii-coastal-ecosystem-accounting-website.share.connect.posit.cloud) |
+| **Recreation account (coral reef welfare)** | [loweas.github.io/CR](https://loweas.github.io/CR/) |
 
-## What This Does
+## Repository contents
 
-| Account | Description |
-|---------|-------------|
-| **Extents** | Spatial coverage of 16 ecosystem types (land cover, benthic habitats) |
-| **Conditions** | Health indicators across terrestrial and marine ecosystems |
-| **Uses** | Ecosystem service valuations for fisheries and coastal recreation |
+- **Shiny dashboard** ([Rhino](https://appsilon.github.io/rhino/)) — explores extents, conditions, and fisheries valuation from processed outputs in `data/`.
+- **Data pipeline** — [`targets`](https://books.ropensci.org/targets/) in `_targets.R`; R helpers in `R/`.
+- **Quarto project website** — source in `website/` (documentation-style pages; may be deployed separately).
 
-## Architecture
+Further technical notes: [documentation/](documentation/) (e.g. [DATA_SOURCES](documentation/DATA_SOURCES.md)).
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│  Shiny App (Rhino)                                           │
-│  • Loads pre-processed artifacts                             │
-│  • Applies filters, renders maps/plots/tables                │
-└──────────────────────────────────────────────────────────────┘
-                              ▲
-                              │ reads from
-┌──────────────────────────────────────────────────────────────┐
-│  ETL Pipeline ({targets})                                    │
-│  • Produces cached, reproducible artifacts                   │
-└──────────────────────────────────────────────────────────────┘
-```
-
-See [ARCHITECTURE.md](documentation/ARCHITECTURE.md) for system design details.
-
-## Project Structure
-
-```
-├── app/
-│   ├── logic/        # Data processing, validation, routing
-│   └── view/         # UI modules (pages, controls, layout)
-├── data/             # 01_raw → 02_interim → 03_processed
-├── documentation/    # Architecture, data sources/inventory
-├── tests/            # testthat (unit), Cypress (e2e)
-└── _targets.R        # ETL pipeline definition
-```
-
-## Quick Start
+## Quick start
 
 ```bash
-git clone https://github.com/olesonlab/hi-coastal-ecosystem-accounting-dashboard.git
-cd hi-coastal-ecosystem-accounting-dashboard
+git clone https://github.com/olesonlab/hi-coastal-ecosystem-accounting.git
+cd hi-coastal-ecosystem-accounting
 
-# Restore dependencies
 Rscript -e "renv::restore()"
-
-# Run ETL pipeline
-Rscript -e "targets::tar_make()"
-
-# Launch app
-Rscript -e "rhino::app()"
+Rscript -e "targets::tar_make()"   # rebuild processed data (optional if data is present)
+Rscript -e "rhino::app()"          # run dashboard locally
 ```
 
-## Tech Stack
-
-| Component | Tool |
-|-----------|------|
-| Framework | [Rhino](https://appsilon.github.io/rhino/) + [Shiny for R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) + [bs4Dash](https://bs4dash.rinterface.com/) |
-| Pipeline | [targets](https://books.ropensci.org/targets/) |
-| Dependencies | [renv](https://rstudio.github.io/renv/) |
-| Testing | [testthat](https://testthat.r-lib.org/index.html), [Cypress](https://www.cypress.io/#create) |
-| Deployment | [Posit Connect](https://connect.posit.cloud/) |
-
-## Documentation
-
-| Document | Description |
-|----------|-------------|
-| [ARCHITECTURE](documentation/ARCHITECTURE.md) | System design and data flow |
-| [DATA_SOURCES](documentation/DATA_SOURCES.md) | Dataset specifications |
+Requires **R 4.5+** (see `renv.lock`). Large raw inputs live under `data/01_raw/`; not all paths may be public—see documentation.
 
 ## License
 
@@ -83,4 +37,4 @@ Rscript -e "rhino::app()"
 
 ## Acknowledgments
 
-Developed at [Oleson Lab](https://www.olesonlab.org/), Department of Natural Resources and Environmental Management, University of Hawaiʻi at Mānoa.
+[Oleson Lab](https://www.olesonlab.org/), Department of Natural Resources and Environmental Management, University of Hawaiʻi at Mānoa.

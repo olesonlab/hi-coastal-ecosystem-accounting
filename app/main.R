@@ -64,24 +64,6 @@ ui <- function(id) {
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
-    .AGENT_LOG_PATH <- "F:/projects/oleson_lab_projects/projects/current/hi-coastal-ecosystem-accounting/debug-2c6332.log"
-    .agent_log <- function(hypothesisId, message, data = list(), runId = "pre-fix-1") {
-      payload <- list(
-        sessionId = "2c6332",
-        runId = runId,
-        hypothesisId = hypothesisId,
-        location = "app/main.R",
-        message = message,
-        data = data,
-        timestamp = as.numeric(Sys.time()) * 1000
-      )
-      cat(
-        paste0(jsonlite::toJSON(payload, auto_unbox = TRUE, null = "null"), "\n"),
-        file = .AGENT_LOG_PATH,
-        append = TRUE
-      )
-    }
-
     ########################
     # Data Loading
     ########################
@@ -245,34 +227,7 @@ server <- function(id) {
       island_val <- conditions_inputs$island()
       cat_val <- conditions_inputs$category()
       realm_val <- if (!is.null(cat_val) && grepl("Terrestrial", cat_val, ignore.case = TRUE)) "Terrestrial" else "Marine"
-      # #region agent log
-      .agent_log(
-        "H1",
-        "conditions island/category observer entered",
-        list(
-          island_is_null = is.null(island_val),
-          island_length = length(island_val),
-          island_value = if (length(island_val) > 0) island_val else NULL,
-          category_is_null = is.null(cat_val),
-          category_length = length(cat_val),
-          category_value = if (length(cat_val) > 0) cat_val else NULL,
-          realm_value = realm_val
-        )
-      )
-      # #endregion
       if (is.null(island_val) || length(island_val) == 0 || !nzchar(island_val)) {
-        # #region agent log
-        .agent_log(
-          "H4",
-          "island not ready; skipping moku lookup",
-          list(
-            island_is_null = is.null(island_val),
-            island_length = length(island_val),
-            island_value = if (length(island_val) > 0) island_val else NULL
-          ),
-          runId = "post-fix-1"
-        )
-        # #endregion
         updateSelectInput(
           session,
           inputId = "controls_conditions-moku",
@@ -288,33 +243,9 @@ server <- function(id) {
           distinct(name2, moku_olelo) |>
           arrange(moku_olelo)
       }, error = function(e) {
-        # #region agent log
-        .agent_log(
-          "H1",
-          "moku lookup filter failed",
-          list(
-            error = as.character(e$message),
-            island_is_null = is.null(island_val),
-            island_length = length(island_val),
-            island_value = if (length(island_val) > 0) island_val else NULL,
-            category_value = if (length(cat_val) > 0) cat_val else NULL,
-            realm_value = realm_val
-          )
-        )
-        # #endregion
         return(conditions_df[0, c("name2", "moku_olelo")])
       })
       moku_choices <- setNames(moku_lookup$name2, moku_lookup$moku_olelo)
-      # #region agent log
-      .agent_log(
-        "H2",
-        "moku choices built",
-        list(
-          choices_n = length(moku_choices),
-          first_choice_value = if (length(moku_choices) > 0) unname(moku_choices[[1]]) else NULL
-        )
-      )
-      # #endregion
       updateSelectInput(
         session,
         inputId = "controls_conditions-moku",
@@ -335,21 +266,6 @@ server <- function(id) {
 
       island_val <- conditions_inputs$island()
       moku_val <- conditions_inputs$moku()
-      # #region agent log
-      .agent_log(
-        "H3",
-        "conditions apply clicked",
-        list(
-          island_value = if (length(island_val) > 0) island_val else NULL,
-          moku_value = if (length(moku_val) > 0) moku_val else NULL,
-          mode_value = conditions_inputs$mode(),
-          indicator_value = conditions_inputs$indicator(),
-          year_value = conditions_inputs$year(),
-          year_a = year_a,
-          year_b = year_b
-        )
-      )
-      # #endregion
 
       state$applied_cond_island    <- island_val
       state$applied_cond_moku      <- if (!is.null(island_val) && nzchar(island_val)) moku_val else ""

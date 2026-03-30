@@ -537,7 +537,18 @@ generate_fig16_otp_faceted_maps <- function(mokus_marine_sf, otp_moku_tbl, out_p
       )
   }
 
-  plots <- purrr::map(names(catalog), make_otp_panel)
+  # Top row (indices 1-3): suppress duplicate moku x-axis; bottom row (4-6): show labels
+  all_names <- names(catalog)
+  top_row  <- all_names[1:3]
+  bot_row  <- all_names[4:6]
+  plots_top <- purrr::map(top_row, function(vn) {
+    make_otp_panel(vn) + ggplot2::theme(
+      axis.text.x  = ggplot2::element_blank(),
+      axis.ticks.x = ggplot2::element_blank()
+    )
+  })
+  plots_bot <- purrr::map(bot_row, make_otp_panel)
+  plots <- c(plots_top, plots_bot)
 
   leg <- cowplot::get_legend(
     make_otp_panel(names(catalog)[1]) +
@@ -623,7 +634,11 @@ generate_conditions_report_figs <- function(
       x = NULL, y = "\u0394 Mean monthly rainfall (mm)"
     ) +
     .theme_account() +
-    ggplot2::theme(legend.position = "none")
+    ggplot2::theme(
+      legend.position = "none",
+      axis.text.y = ggplot2::element_blank(),
+      axis.ticks.y = ggplot2::element_blank()
+    )
 
   f9b <- wetl_r |>
     dplyr::left_join(isl, by = "name2") |>
@@ -648,11 +663,11 @@ generate_conditions_report_figs <- function(
     ggplot2::theme(legend.position = "none")
 
   leg9 <- cowplot::get_legend(
-    p9a + ggplot2::theme(legend.position = "bottom") +
-      ggplot2::guides(fill = ggplot2::guide_legend(nrow = 2, title.position = "top"))
+    p9b + ggplot2::theme(legend.position = "bottom") +
+      ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "top"))
   )
   fig9_mid <- cowplot::plot_grid(p9a, p9b, ncol = 1, align = "v", rel_heights = c(1, 1))
-  fig9 <- cowplot::plot_grid(leg9, fig9_mid, ncol = 1, rel_heights = c(0.12, 1))
+  fig9 <- cowplot::plot_grid(fig9_mid, leg9, ncol = 1, rel_heights = c(1, 0.08))
   f9p <- file.path(outdir, "fig09_rainfall_delta_baseline.png")
   .save_account_fig(fig9, f9p, width = 15, height = 12, dpi = 300L)
 
@@ -709,7 +724,8 @@ generate_conditions_report_figs <- function(
     .theme_account() +
     ggplot2::theme(
       legend.position = "none",
-      axis.text.x = ggplot2::element_text(angle = 55, hjust = 1, size = 7)
+      axis.text.x = ggplot2::element_blank(),
+      axis.ticks.x = ggplot2::element_blank()
     )
 
   leg10 <- cowplot::get_legend(
@@ -759,12 +775,17 @@ generate_conditions_report_figs <- function(
     p11a + ggplot2::theme(legend.position = "bottom") +
       ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "top"))
   )
+  .no_y <- ggplot2::theme(
+    legend.position = "none",
+    axis.text.y = ggplot2::element_blank(),
+    axis.ticks.y = ggplot2::element_blank()
+  )
   fig11 <- cowplot::plot_grid(
     cowplot::plot_grid(
       p11a + ggplot2::theme(legend.position = "none"),
-      p11b + ggplot2::theme(legend.position = "none"),
+      p11b + .no_y,
       p11c + ggplot2::theme(legend.position = "none"),
-      p11d + ggplot2::theme(legend.position = "none"),
+      p11d + .no_y,
       nrow = 2, align = "hv"
     ),
     leg11,
@@ -785,8 +806,8 @@ generate_conditions_report_figs <- function(
   )
   fig12 <- cowplot::plot_grid(
     cowplot::plot_grid(
-      p12a + ggplot2::theme(legend.position = "none"),
-      p12b + ggplot2::theme(legend.position = "none"),
+      p12a + .no_y,
+      p12b + .no_y,
       p12c + ggplot2::theme(legend.position = "none"),
       ncol = 1, align = "v"
     ),
@@ -866,7 +887,11 @@ generate_conditions_report_figs <- function(
   fig14 <- cowplot::plot_grid(
     cowplot::plot_grid(
       p14a + ggplot2::theme(legend.position = "none"),
-      p14b + ggplot2::theme(legend.position = "none"),
+      p14b + ggplot2::theme(
+        legend.position = "none",
+        axis.text.x = ggplot2::element_blank(),
+        axis.ticks.x = ggplot2::element_blank()
+      ),
       ncol = 2, align = "hv"
     ),
     leg14,
@@ -883,12 +908,17 @@ generate_conditions_report_figs <- function(
       by = "name2"
     ) |>
     dplyr::mutate(island_l = factor(island_l, levels = names(pal))) |>
-    dplyr::arrange(dplyr::desc(par_chge))
+    dplyr::filter(!is.na(island_l)) |>
+    dplyr::group_by(island_l) |>
+    dplyr::arrange(dplyr::desc(par_chge), .by_group = TRUE) |>
+    dplyr::ungroup() |>
+    dplyr::mutate(name2 = factor(name2, levels = unique(name2)))
 
-  p15 <- ggplot2::ggplot(par_df, ggplot2::aes(x = stats::reorder(name2, par_chge), y = par_chge, fill = island_l)) +
+  p15 <- ggplot2::ggplot(par_df, ggplot2::aes(x = name2, y = par_chge, fill = island_l)) +
     ggplot2::geom_col() +
-    ggplot2::scale_fill_manual(name = "Island", values = pal, na.value = "grey70", na.translate = FALSE) +
+    ggplot2::scale_fill_manual(name = "Island", values = pal, labels = ISLAND_LABELS, na.value = "grey70", na.translate = FALSE) +
     ggplot2::scale_x_discrete(labels = lbl_moku) +
+    ggplot2::facet_wrap(~island_l, scales = "free_x", labeller = ggplot2::as_labeller(ISLAND_LABELS)) +
     ggplot2::labs(
       title = "Photosynthetically active radiation (PAR)",
       subtitle = "2019 vs. mean of 2013 and 2016",
@@ -897,10 +927,10 @@ generate_conditions_report_figs <- function(
     ) +
     .theme_account() +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 55, hjust = 1, size = 8)) +
-    ggplot2::guides(fill = ggplot2::guide_legend(nrow = 2))
+    ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1))
 
   f15p <- file.path(outdir, "fig15_par_increase.png")
-  .save_account_fig(p15, f15p, width = 12, height = 7, dpi = 300L)
+  .save_account_fig(p15, f15p, width = 14, height = 10, dpi = 300L)
 
   otp_tbl <- readr::read_csv(otp_moku_csv, show_col_types = FALSE)
   f16p <- file.path(outdir, "fig16_otp_faceted_maps.png")

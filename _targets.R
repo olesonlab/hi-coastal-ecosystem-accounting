@@ -406,6 +406,7 @@ list(
         conditions_figs,
         export_otp_moku_zonal
       )
+      unlink("website/_site", recursive = TRUE, force = TRUE)
       quarto::quarto_render(input = "website")
       list.files("website/_site", pattern = "\\.html$", full.names = TRUE)
     },
