@@ -4,10 +4,11 @@ Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SE
 
 ## Links
 
-- **[HCEA Extents and Conditions Dashboard Demo](https://olesonlab-hi-coastal-ecosystem-accounting.share.connect.posit.cloud)**
-- **[HCEA Fisheries Exchange Values Dashboard Demo](https://drive.google.com/file/d/1-YyCopTKhXcHii7TXUnpemuc2fOPesJN/view?usp=sharing)**
-- **[HCEA Project Website](https://olesonlab-hawaii-coastal-ecosystem-accounting-website.share.connect.posit.cloud)**
-- **[Recreation Account Website](https://loweas.github.io/CR/)**
+- **[HCEA Extents and Conditions Dashboard Prototype](https://olesonlab-hcea-extents-and-conditions-dashboard.share.connect.posit.cloud)**
+- **[HCEA Fisheries Exchange Values Dashboard GitHub Repo](https://github.com/CTAHR-Dashboard/CTAHR-Dashboard)**
+  - **[Dashboard Prototype Demo Video](https://drive.google.com/file/d/1-YyCopTKhXcHii7TXUnpemuc2fOPesJN/view?usp=sharing)**
+- **[HCEA Project Website](https://olesonlab-hcea-project-website.share.connect.posit.cloud)**
+- **[HCEA Recreation Account Website](https://loweas.github.io/moku_cr/)**
 
 ## Repository contents
 
