@@ -8,7 +8,9 @@ Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SE
 - **[HCEA Fisheries Exchange Values Dashboard GitHub Repo](https://github.com/CTAHR-Dashboard/CTAHR-Dashboard)**
   - **[Dashboard Prototype Demo Video](https://drive.google.com/file/d/1-YyCopTKhXcHii7TXUnpemuc2fOPesJN/view?usp=sharing)**
 - **[HCEA Project Website](https://olesonlab-hcea-project-website.share.connect.posit.cloud)**
-- **[HCEA Recreation Account Website](https://loweas.github.io/moku_cr/)**
+- **HCEA Recreation Account Resources**
+  - [The economic impact of climate change on coral reef in the Main Hawaiian Islands project website](https://loweas.github.io/moku_cr/)
+  - [Recreation by moku website](https://loweas.github.io/moku_cr/)
 
 ## Repository contents
 
