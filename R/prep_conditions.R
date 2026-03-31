@@ -614,131 +614,135 @@ generate_conditions_report_figs <- function(
     dplyr::distinct(name2, island) |>
     dplyr::mutate(island_l = island)
 
-  f9a <- tree_r |>
-    dplyr::left_join(isl, by = "name2") |>
-    tidyr::pivot_longer(cols = c(chg2013, chg2019), names_to = "period", values_to = "delta") |>
-    dplyr::mutate(
-      period = dplyr::recode(period, chg2013 = "2013 vs 1990", chg2019 = "2019 vs 1990"),
-      island_l = factor(island_l, levels = names(pal))
-    )
+  # ── Figure 9 — Rainfall change vs. 1990 baseline ──────────────────────────
+  # One bar per moku: mean of 2013 and 2019 change relative to 1990 (matches
+  # Louis's caption: "Comparison made with mean of 2013 & 2019 rainfall.")
+  # Two panels stacked vertically: tree cover (top) and freshwater wetland (bottom).
+  # Y-axis label suppressed on top panel; shown on bottom panel only.
 
-  p9a <- ggplot2::ggplot(f9a, ggplot2::aes(x = stats::reorder(name2, delta), y = delta, fill = island_l)) +
-    ggplot2::geom_col(position = ggplot2::position_dodge(width = 0.8), width = 0.75) +
-    ggplot2::facet_wrap(~period, ncol = 2) +
-    ggplot2::scale_fill_manual(name = "Island", values = pal, na.value = "grey70", na.translate = FALSE) +
-    ggplot2::scale_x_discrete(labels = lbl_moku) +
-    ggplot2::coord_flip() +
-    ggplot2::labs(
-      title = "Tree cover extent",
-      subtitle = "Rainfall change vs. 1990 mean (mm)",
-      x = NULL, y = "\u0394 Mean monthly rainfall (mm)"
+  .make_fig9_panel <- function(rain_data, panel_title, show_y_label) {
+    df <- rain_data |>
+      dplyr::mutate(chg_mean = (chg2013 + chg2019) / 2) |>
+      dplyr::left_join(isl, by = "name2") |>
+      dplyr::mutate(island_l = factor(island_l, levels = names(pal)))
+
+    ggplot2::ggplot(
+      df,
+      ggplot2::aes(x = stats::reorder(name2, chg_mean), y = chg_mean, fill = island_l)
     ) +
-    .theme_account() +
-    ggplot2::theme(
-      legend.position = "none",
-      axis.text.y = ggplot2::element_blank(),
-      axis.ticks.y = ggplot2::element_blank()
-    )
+      ggplot2::geom_col(width = 0.75) +
+      ggplot2::scale_fill_manual(
+        name = "Island", values = pal, labels = ISLAND_LABELS, na.value = "grey70", na.translate = FALSE
+      ) +
+      ggplot2::scale_x_discrete(labels = lbl_moku) +
+      ggplot2::coord_flip() +
+      ggplot2::labs(
+        title    = panel_title,
+        subtitle = "Mean change vs. 1990 baseline (mm)",
+        x        = NULL,
+        y        = if (show_y_label) "\u0394 Mean monthly rainfall (mm)" else NULL
+      ) +
+      .theme_account() +
+      ggplot2::theme(
+        legend.position  = "none",
+        axis.text.y      = ggplot2::element_text(size = 13, colour = "black"),
+        axis.text.x      = ggplot2::element_text(size = 13, colour = "black"),
+        axis.title.x     = ggplot2::element_text(size = 15, face = "bold", colour = "black"),
+        axis.title.y     = ggplot2::element_text(size = 15, face = "bold", colour = "black"),
+        plot.title       = ggplot2::element_text(size = 18, face = "bold", colour = "black"),
+        plot.subtitle    = ggplot2::element_text(size = 15, face = "bold", colour = "black")
+      )
+  }
 
-  f9b <- wetl_r |>
-    dplyr::left_join(isl, by = "name2") |>
-    tidyr::pivot_longer(cols = c(chg2013, chg2019), names_to = "period", values_to = "delta") |>
-    dplyr::mutate(
-      period = dplyr::recode(period, chg2013 = "2013 vs 1990", chg2019 = "2019 vs 1990"),
-      island_l = factor(island_l, levels = names(pal))
-    )
-
-  p9b <- ggplot2::ggplot(f9b, ggplot2::aes(x = stats::reorder(name2, delta), y = delta, fill = island_l)) +
-    ggplot2::geom_col(position = ggplot2::position_dodge(width = 0.8), width = 0.75) +
-    ggplot2::facet_wrap(~period, ncol = 2) +
-    ggplot2::scale_fill_manual(name = "Island", values = pal, na.value = "grey70", na.translate = FALSE) +
-    ggplot2::scale_x_discrete(labels = lbl_moku) +
-    ggplot2::coord_flip() +
-    ggplot2::labs(
-      title = "Freshwater wetland extent",
-      subtitle = "Rainfall change vs. 1990 mean (mm)",
-      x = NULL, y = NULL
-    ) +
-    .theme_account() +
-    ggplot2::theme(legend.position = "none")
+  p9a <- .make_fig9_panel(tree_r, "Tree Cover", show_y_label = FALSE)
+  p9b <- .make_fig9_panel(wetl_r, "Freshwater Wetland", show_y_label = TRUE)
 
   leg9 <- cowplot::get_legend(
-    p9b + ggplot2::theme(legend.position = "bottom") +
-      ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "top"))
+    p9b +
+      ggplot2::theme(legend.position = "bottom") +
+      ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "left")) +
+      ggplot2::theme(
+        legend.title = ggplot2::element_text(size = 15, face = "bold", colour = "black"),
+        legend.text = ggplot2::element_text(size = 14, colour = "black")
+      )
   )
-  fig9_mid <- cowplot::plot_grid(p9a, p9b, ncol = 1, align = "v", rel_heights = c(1, 1))
-  fig9 <- cowplot::plot_grid(fig9_mid, leg9, ncol = 1, rel_heights = c(1, 0.08))
+  fig9_mid <- cowplot::plot_grid(p9a, p9b, ncol = 1, align = "v", rel_heights = c(1.35, 1.35))
+  fig9     <- cowplot::plot_grid(fig9_mid, leg9, ncol = 1, rel_heights = c(1, 0.06))
   f9p <- file.path(outdir, "fig09_rainfall_delta_baseline.png")
-  .save_account_fig(fig9, f9p, width = 15, height = 12, dpi = 300L)
+  .save_account_fig(
+    fig9, f9p,
+    width = 20, height = 18, dpi = 300L
+  )
+
+  # ── Figure 10 — Absolute rainfall by extent type and year ─────────────────
+  # Four separate panels, each ordered by that panel's own 1990 values (desc).
+  # This produces a smooth declining shape in every panel, matching the reference.
+  # Layout: 2 columns (maximum, mean) × 2 rows (freshwater wetland, tree cover).
 
   tree_w <- readr::read_csv(paths_in$conditions_terr_rainfall, show_col_types = FALSE) |>
     janitor::clean_names() |>
     dplyr::filter(year %in% c(1990, 2013, 2019)) |>
-    dplyr::mutate(et = "Tree cover", year = as.integer(year))
+    dplyr::mutate(year = as.integer(year)) |>
+    dplyr::left_join(isl, by = "name2") |>
+    dplyr::mutate(island_l = factor(island_l, levels = names(pal)))
 
   wetl_w <- readr::read_csv(paths_in$conditions_wetl_rainfall, show_col_types = FALSE) |>
     janitor::clean_names() |>
     dplyr::filter(year %in% c(1990, 2013, 2019)) |>
-    dplyr::mutate(et = "Freshwater wetland", year = as.integer(year))
-
-  f10 <- dplyr::bind_rows(
-    tree_w |> dplyr::select(name2, year, rain_max, rain_avg, et),
-    wetl_w |> dplyr::select(name2, year, rain_max, rain_avg, et)
-  ) |>
+    dplyr::mutate(year = as.integer(year)) |>
     dplyr::left_join(isl, by = "name2") |>
     dplyr::mutate(island_l = factor(island_l, levels = names(pal)))
 
-  ref_ord <- f10 |>
-    dplyr::filter(year == 1990, et == "Tree cover") |>
-    dplyr::arrange(dplyr::desc(rain_avg)) |>
-    dplyr::pull(name2)
+  .make_fig10_panel <- function(data, metric, panel_title) {
+    ord <- data |>
+      dplyr::filter(year == 1990L) |>
+      dplyr::arrange(dplyr::desc(.data[[metric]])) |>
+      dplyr::pull(name2)
+    df <- data |> dplyr::mutate(name2 = factor(name2, levels = ord))
 
-  f10 <- f10 |> dplyr::mutate(name2 = factor(name2, levels = ref_ord))
-
-  p10 <- ggplot2::ggplot(f10, ggplot2::aes(x = name2, y = rain_max, fill = factor(year))) +
-    ggplot2::geom_col(position = ggplot2::position_dodge(width = 0.85), width = 0.8) +
-    ggplot2::facet_grid(et ~ ., scales = "free_y") +
-    ggplot2::scale_fill_manual(name = "Year", values = PAL_YEAR_RAINFALL) +
-    ggplot2::scale_x_discrete(labels = lbl_moku) +
-    ggplot2::labs(
-      title = "Maximum monthly rainfall",
-      subtitle = "By extent type and moku",
-      x = NULL, y = "mm"
+    ggplot2::ggplot(
+      df,
+      ggplot2::aes(x = name2, y = .data[[metric]], fill = factor(year))
     ) +
-    .theme_account() +
-    ggplot2::theme(
-      legend.position = "none",
-      axis.text.x = ggplot2::element_text(angle = 55, hjust = 1, size = 7)
-    )
+      ggplot2::geom_col(position = ggplot2::position_dodge(width = 0.85), width = 0.8) +
+      ggplot2::scale_fill_manual(name = "Year", values = PAL_YEAR_RAINFALL) +
+      ggplot2::scale_x_discrete(labels = lbl_moku) +
+      ggplot2::labs(title = panel_title, x = NULL, y = "mm") +
+      .theme_account() +
+      ggplot2::theme(
+        legend.position  = "none",
+        axis.text.x      = ggplot2::element_text(angle = 55, hjust = 1, size = 13, colour = "black"),
+        axis.text.y      = ggplot2::element_text(size = 12, colour = "black"),
+        axis.title.y     = ggplot2::element_text(size = 15, face = "bold", colour = "black"),
+        plot.title       = ggplot2::element_text(size = 18, face = "bold", colour = "black")
+      )
+  }
 
-  p10b <- ggplot2::ggplot(f10, ggplot2::aes(x = name2, y = rain_avg, fill = factor(year))) +
-    ggplot2::geom_col(position = ggplot2::position_dodge(width = 0.85), width = 0.8) +
-    ggplot2::facet_grid(et ~ ., scales = "free_y") +
-    ggplot2::scale_fill_manual(name = "Year", values = PAL_YEAR_RAINFALL) +
-    ggplot2::scale_x_discrete(labels = lbl_moku) +
-    ggplot2::labs(
-      title = "Mean monthly rainfall",
-      subtitle = "By extent type and moku",
-      x = NULL, y = "mm"
-    ) +
-    .theme_account() +
-    ggplot2::theme(
-      legend.position = "none",
-      axis.text.x = ggplot2::element_blank(),
-      axis.ticks.x = ggplot2::element_blank()
-    )
+  p_fw_max <- .make_fig10_panel(wetl_w, "rain_max", "Freshwater Wetland — Maximum Monthly Rainfall")
+  p_tc_max <- .make_fig10_panel(tree_w, "rain_max", "Tree Cover — Maximum Monthly Rainfall")
+  p_fw_avg <- .make_fig10_panel(wetl_w, "rain_avg", "Freshwater Wetland — Mean Monthly Rainfall")
+  p_tc_avg <- .make_fig10_panel(tree_w, "rain_avg", "Tree Cover — Mean Monthly Rainfall")
 
   leg10 <- cowplot::get_legend(
-    p10 + ggplot2::theme(legend.position = "bottom") +
-      ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "top"))
+    p_tc_avg +
+      ggplot2::theme(legend.position = "bottom") +
+      ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1, title.position = "left")) +
+      ggplot2::theme(
+        legend.title = ggplot2::element_text(size = 15, face = "bold", colour = "black"),
+        legend.text = ggplot2::element_text(size = 14, colour = "black")
+      )
   )
-  fig10 <- cowplot::plot_grid(
-    cowplot::plot_grid(p10, p10b, ncol = 2, align = "hv"),
-    leg10,
-    ncol = 1, rel_heights = c(1, 0.05)
+  fig10_panels <- cowplot::plot_grid(
+    p_fw_max, p_fw_avg,
+    p_tc_max, p_tc_avg,
+    ncol = 2, align = "hv"
   )
+  fig10 <- cowplot::plot_grid(fig10_panels, leg10, ncol = 1, rel_heights = c(1, 0.06))
   f10p <- file.path(outdir, "fig10_rainfall_2x2.png")
-  .save_account_fig(fig10, f10p, width = 20, height = 10, dpi = 300L)
+  .save_account_fig(
+    fig10, f10p,
+    width = 24, height = 15, dpi = 300L
+  )
 
   cor <- .load_biotic_means(paths_in$conditions_biotic_coral_cover)
   ad <- .load_biotic_means(paths_in$conditions_biotic_adult_den)

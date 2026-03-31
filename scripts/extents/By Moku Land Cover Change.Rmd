@@ -1,0 +1,141 @@
+---
+title: "By Moku Land Cover Change"
+output: html_document
+date: "2023-01-27"
+---
+
+This notebook takes geo-rectified .tif rasters of landcover in MHIs, and creates a dataframe of landcover change (by class) for each Moku on each Island.
+This is the input dataframe required to accompany the RShiny app displaying reactive % landcover change 
+
+```{r setup}
+library(raster)
+library(rgdal)
+library(tidyverse)
+```
+
+```{r}
+setwd("C:/Extent Map proj")
+data_DIR <- "C:/all_data/remote sensing data"
+vector_path <- file.path(data_DIR, "/HIMARC/new data/Moku_NEW.shp")
+```
+
+## Check vector layer
+
+```{r}
+mask_vector <- readOGR(vector_path)
+
+# Project the vector layer to WGS84
+
+mask_vector <- spTransform(mask_vector, CRS("+proj=longlat +datum=WGS84"))
+plot(mask_vector)
+```
+## Select island vector layer
+
+```{r}
+island <- "Kauai"
+sub_mask_vector <- mask_vector[mask_vector$ISLAND == island,]
+plot(sub_mask_vector)
+```
+## Import geo-rectified raster layer, then mask it by the island vector
+
+```{r}
+# Rasters of two time period we want to compare 
+
+lu_raster_proj <- raster("lc_2000.tif")
+lu_raster_proj_aft <- raster("lc_2020.tif")
+
+cropped_b <- crop(x = lu_raster_proj, y = extent(sub_mask_vector))
+cropped_aft <- crop(x = lu_raster_proj_aft, y = extent(sub_mask_vector))
+
+plot(cropped_b)
+plot(cropped_aft)
+```
+Import the "raster.df" function to convert cropped raster into df for ease of manipulation
+
+```{r, eval=FALSE}
+source("rasterdf.R")
+```
+
+## Check the change in a particular landcover class on the island over two time periods
+
+```{r, eval=FALSE}
+# Compare at the island level Land Cover change over two discrete years 
+
+lc <- 1    # change this to landcover class of interest
+
+cropped_df <- rasterdf(cropped_b)
+cropped_df_aft <- rasterdf(cropped_aft)
+
+# Number of pixels corresponding to developed land (ex.)
+list(sum(cropped_df$value == lc), sum(cropped_df_aft$value == lc))
+
+```
+## Get all Moku names or island
+
+```{r}
+list(sub_mask_vector$NAME2[sub_mask_vector$ISLAND == island])
+
+moku <- list("KOOLAU KAU")
+#moku <- list("LAHAINA", "KEALALOLOA", "KULA", "HONUAULA" , "KAHIKINUI", "KAUPO", "KIPAHULU", "HANA", "KOOLAU MAU", "HAMAKUALOA", "HAMAKUAPOKO", "WAILUKU", "KAANAPALI")
+```
+
+## Loop to compile sum of pixels for individual Moku, and input into dataframe 
+
+
+```{r}
+lc_classes <- list(1, 2, 3, 4, 6, 8)
+
+# Create an empty dataframe to house all mokus and by landcover class
+
+columns <- c("moku", "lc_before", "lc_after") 
+grand_df <- data.frame(matrix(nrow = 0, ncol = length(columns))) 
+colnames(grand_df) = columns
+
+# Function creates 2 summed time series- one before and one after- for the land cover class in question,
+# Then puts it into a dataframe.
+
+mokulc_df <- function(mokus, lc){ 
+  
+  series_b <- c()
+  
+  for (i in mokus){
+    cropped <- crop(x = lu_raster_proj, y = extent(sub_mask_vector[sub_mask_vector$NAME2 == i,]))
+    cropped_df <- rasterdf(cropped)
+    series_b <- c(series_b,sum(cropped_df$value == lc))
+    }
+  
+  
+  series_aft <- c()
+  
+  for (i in mokus){
+    cropped <- crop(x = lu_raster_proj_aft, y = extent(sub_mask_vector[sub_mask_vector$NAME2 == i,]))
+    cropped_df <- rasterdf(cropped)
+    series_aft <- c(series_aft,sum(cropped_df$value == lc))    
+    }
+  
+  # Then with series of counts for each Moku, create a df
+  
+  df <- data.frame(
+    moku <- unlist(mokus),
+    lc <- series_b,
+    lc_post <- series_aft)
+  colnames(df) <- c("moku", "lc_before", "lc_after")
+  
+  df
+} 
+
+```
+
+
+```{r}
+
+grand_df <- rbind(grand_df, mokulc_df(moku,1))
+grand_df <- rbind(grand_df, mokulc_df(moku,2))
+grand_df <- rbind(grand_df, mokulc_df(moku,3))
+grand_df <- rbind(grand_df, mokulc_df(moku,4))
+grand_df <- rbind(grand_df, mokulc_df(moku,6))
+grand_df <- rbind(grand_df, mokulc_df(moku,8))
+
+write.csv(grand_df,"C:/Extent Map proj/grand_df.csv" )
+```
+

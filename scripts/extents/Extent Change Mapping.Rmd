@@ -1,0 +1,248 @@
+---
+title: "Ecosystem Extent Map"
+output: html_document
+date: '2022-08-08'
+---
+Aim- to map changes in ecosystem extent by Moku in the main Hawaiian Islands (MHI) on an interactive map
+
+This first notebook loads the raster data and carries out initial processing.
+Exporting a cropped area of interest raster
+
+Reference for processing raster Land Cover https://bookdown.org/mcwimberly/gdswr-book/raster-data-discrete-variables.html
+---
+
+```{r setup}
+#library(leaflet)
+library(raster)
+library(rgdal)
+library(tidyverse)
+library(ggspatial)
+```
+
+```{r}
+setwd("C:/Extent Map proj")
+data_DIR <- "C:/all_data/remote sensing data"
+raster_path <- file.path(data_DIR, "/LCMAP Land Cover data/lcmap_oahuWaianae_2015.tif")
+
+#raster_path <- file.path(data_DIR, "/LCMAP Land Cover data/lcmap_2000_2011/LCMAP_HI_2004_V10_LCPRI.tiff")
+
+#raster_path <- file.path(data_DIR, "/LCMAP Land Cover data/lcmap_2010_2020/LCMAP_HI_2020_V10_LCPRI.tiff")
+
+# Oahu island only 
+vector_path <- file.path(data_DIR, "/HIMARC/new data/Moku_NEW.shp")
+```
+
+
+First, import Land Cover/ Land-use raster, and vector layer to mask it with
+
+```{r}
+lu_raster <- raster(raster_path)
+mask_vector <- readOGR(vector_path)
+plot(mask_vector)
+```
+```{r}
+sub_mask_vector <- mask_vector[mask_vector$NAME2 == "WAIANAE",]
+plot(sub_mask_vector)
+```
+
+
+Mask LC raster with vector mask (ie. island/ Moku vector)
+Note: projecting raster takes a long time, best to do it once and export it. Then just import it when you need it again.
+
+```{r}
+
+lu_raster_proj <- projectRaster(lu_raster, crs = "+proj=longlat +datum=WGS84", method = "ngb")
+#writeRaster(lu_raster_proj,'lc_2004.tif',options=c('TFW=YES'), overwrite = TRUE)
+
+# Or import previously projected raster
+
+#lu_raster_proj <- raster("lc_2000.tif")
+#lu_raster_proj_aft <- raster("lc_2020.tif")
+sub_mask_vector <-spTransform(sub_mask_vector, CRS("+proj=longlat +datum=WGS84"))
+
+#masked_raster <- mask(x = lu_raster_proj, mask = sub_mask_vector)
+#plot(lu_raster_proj)
+
+
+```
+
+Crop the Raster Extent
+
+```{r}
+cropped <- crop(x = lu_raster_proj, y = extent(sub_mask_vector))
+#cropped_b <- crop(x = lu_raster_proj, y = extent(sub_mask_vector))
+#cropped_aft <- crop(x = lu_raster_proj_aft, y = extent(sub_mask_vector))
+plot(cropped)
+```
+
+
+Import the "raster.df" function to convert cropped raster into df for ease of manipulation
+
+```{r, eval=FALSE}
+source("rasterdf.R")
+```
+
+This is the output for further analysis
+
+```{r, eval=FALSE}
+# Compare at the island level Land Cover change over two discrete years 
+
+lc <- 8    # change this to landcover class of interest
+
+cropped_df <- rasterdf(cropped_b)
+cropped_df_aft <- rasterdf(cropped_aft)
+
+# Number of pixels corresponding to developed land (ex.)
+list(sum(cropped_df$value == lc), sum(cropped_df_aft$value == lc))
+
+```
+
+Loop to compile sum of pixels for individual Moku, and input into dataframe 
+```{r}
+
+oahu_moku <- list("EWA", "KONA OAH", "KOOLAUPOKO", "KOOLAULOA", "WAIALUA", "WAIANAE")
+#kauai_moku <- list("MANA", "KONA KAU", "PUNA KAU", "KOOLAU KAU", "HALELEA", "NAPALI")
+
+series_b <- c()
+
+for (i in oahu_moku){
+  cropped <- crop(x = lu_raster_proj, y = extent(sub_mask_vector[sub_mask_vector$NAME2 == i,]))
+  cropped_df <- rasterdf(cropped)
+  
+  series_b <- c(series_b,sum(cropped_df$value == lc))    
+}
+
+series_aft <- c()
+
+for (i in oahu_moku){
+  cropped <- crop(x = lu_raster_proj_aft, y = extent(sub_mask_vector[sub_mask_vector$NAME2 == i,]))
+  cropped_df <- rasterdf(cropped)
+  
+  series_aft <- c(series_aft,sum(cropped_df$value == lc))    
+}
+
+# Then with series of counts for each Moku, create a df
+
+df <- data.frame(
+  moku <- unlist(oahu_moku),
+  lc <- series_b,
+  lc_post <- series_aft)
+
+colnames(df) <- c("moku", "lc")
+
+print(df)
+
+```
+
+
+
+
+However, if you just want a .tif file this is the output.
+Export cropped raster file
+
+```{r}
+#writeRaster(cropped,'lc_waianae_2015.tif',options=c('TFW=YES'))
+```
+
+
+
+
+# Produce nice LC map with Custom colourtable
+This extension is for production of nice looking LC maps for reports, presentations etc. 
+First import the .tif file from above output.
+
+```{r}
+cropped <- raster("lc_waianae_2015.tif")
+cropped_df <- rasterdf(cropped)
+```
+  
+```{r}
+lc_codes <- c(1,2,3,4,5,6,8)
+lc_names <- c("Developed", "Cropland", "Grass/Shrub", "Tree Cover", "Water", "Wetland", "Barren")
+clrs <- c("#525252", "#AB6C28", "#CCB879", "#005a32", "#034e7b", "#4292c6", "#bdbdbd")
+
+names(clrs) <- as.character(lc_codes)
+clrs
+```
+
+```{r, eval=FALSE}
+p <- ggplot(data = cropped_df) +
+  geom_raster(aes(x = x, y = y, fill = as.character(value))) +
+  ggtitle("WAIANAE, Oahu") +
+  scale_fill_manual(name = "Land cover 2014",
+                    values = clrs,
+                    labels = lc_names,
+                    na.translate = FALSE) +
+  coord_sf(expand = F) +
+  theme(axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        panel.background = element_rect(fill = "white"),
+        plot.title = element_text(hjust = 0.5)
+        )+
+   theme(axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        panel.background = element_rect(fill = "white"),
+        plot.title = element_text(hjust = 0.5)
+        ) +
+  annotation_north_arrow(height = unit(1, "cm"), 
+                         width = unit(.65, "cm"),
+                         pad_y = unit(1, "cm")) +
+  annotation_scale(location = "bl")
+p  
+
+#ggsave(plot = p, filename = "oahu2000.png")
+```
+
+
+# Calculate area of each class
+
+
+
+
+
+
+```{r}
+library(sf)
+```
+```{r}
+moku <- st_make_valid(st_read(vector_path))
+moku <- st_transform(moku, CRS("+proj=longlat +datum=WGS84"))
+
+mokuname <- "WAIANAE"
+island <- "Oahu"
+
+moku_crop <- moku[moku$NAME2 == mokuname,]
+plot(st_geometry(moku_crop))
+```
+
+
+```{r}
+
+moku_area <- sum(st_area(moku_crop[moku_crop$NAME2 == mokuname,]))
+
+cropped_df <- cropped_df %>% filter(cropped_df$value > 0)
+    
+  agg_df<- cropped_df %>% 
+    count(value) %>% 
+    mutate('area m^2' = n * 100 * 100,
+         'area km^2' = round((n * 100 * 100)/ 1e6, 2)) %>% 
+    mutate('prop_cover' = `area m^2` / moku_area)
+    
+  agg_df$Land_cover <- agg_df$value  
+  agg_df$Land_cover[agg_df$value == 1] <- "Developed"
+  agg_df$Land_cover[agg_df$value == 2] <- "Cropland"
+  agg_df$Land_cover[agg_df$value == 3] <- "Grass/Shrub"
+  agg_df$Land_cover[agg_df$value == 4] <- "Tree Cover"
+  agg_df$Land_cover[agg_df$value == 5] <- "Water"
+  agg_df$Land_cover[agg_df$value == 6] <- "Wetland"
+  agg_df$Land_cover[agg_df$value == 8] <- "Barren"
+  agg_df$Island <- island
+  
+  agg_df
+```
+
+

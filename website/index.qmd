@@ -17,7 +17,7 @@ Natural capital accounts measure the contribution of ecosystems to human wellbei
 |---------|-------------|
 | [**Extents & Conditions**](extents_conditions.qmd) | Ecosystem type areas and biophysical condition indicators by moku (2013, 2016, 2019) |
 | [**Fisheries**](fisheries.qmd) | Commercial and non-commercial exchange values by species group, county, and island (1997–2022) |
-| [**Recreation**](https://loweas.github.io/CR/) | Non-market values for marine recreational activities |
+| [**Recreation**](https://loweas.github.io/moku_cr/) | Non-market values for marine recreational activities |
 
 ---
 

@@ -1,0 +1,98 @@
+---
+title: "Clean NWI Data"
+output: html_document
+date: "2023-04-03"
+---
+
+Clip National Wetlands Inventory (NWI) dataset by Moku.
+Filter the data for wetlands only 
+
+```{r setup}
+library(raster)
+library(rgdal)
+library(tidyverse)
+library(sf)
+library(ggspatial)
+```
+
+```{r}
+
+setwd("C:/Extent Map proj")
+data_DIR <- "C:/all_data"
+
+vector_path <- file.path(data_DIR, "/remote sensing data/National Wetlands Inventory/HI_shapefile_wetlands/HI_Wetlands.shp")
+moku_bound <- file.path(data_DIR, "/remote sensing data/HIMARC/new data/Moku_merged.shp")
+
+```
+
+```{r}
+nwi <- st_make_valid(st_read(vector_path))
+nwi <- st_transform(nwi, CRS("+proj=longlat +datum=WGS84"))
+
+moku <- st_make_valid(st_read(moku_bound))
+moku <- st_transform(moku, CRS("+proj=longlat +datum=WGS84"))
+```
+## Get the moku of interest, then clip the NWI data by the terrestrial and marine extent of the moku.
+## Filter out the data that are NOT wetlands
+
+```{r}
+mokuname <- "WAIANAE"
+
+moku_crop <- moku[moku$NAME2 == mokuname,]
+
+#plot(st_geometry(moku_crop))
+```
+
+
+```{r}
+cropped <- st_intersection(nwi, moku_crop)
+
+plot(st_geometry(cropped))
+```
+```{r}
+moku_wet <- cropped %>% 
+  filter(str_detect(WETLAND_TY, "Wetland")) %>% 
+  filter(!str_detect(WETLAND_TY, "Forested")) # This is an additional filter to only keep rows that DO NOT have forested, riverine...
+
+plot(st_geometry(moku_wet))
+```
+```{r}
+moku_wet$new_area <-(st_area(moku_wet))/ 1e6
+sum(moku_wet$new_area)
+```
+
+
+```{r}
+wet_area <- data.frame("Moku" = character(),
+                       "Wetland Area (km2)" = numeric())
+
+isl <- unique(na.omit(moku$ISLAND))
+
+for (i in isl){
+  
+  mok <- unique(na.omit(moku$NAME2[moku$ISLAND == i]))    # Get a list of unique Moku names for the island
+  
+  for (i in mok){
+    
+    moku_crop <- moku[moku$NAME2 == i,]
+    cropped <- st_intersection(nwi, moku_crop)    
+    
+    moku_wet <- cropped %>% 
+      filter(str_detect(WETLAND_TY, "Wetland")) %>% 
+      filter(!str_detect(WETLAND_TY, "Forested"))
+    
+    moku_wet$new_area <-(st_area(moku_wet))/ 1e6
+    wetl <- sum(moku_wet$new_area)                       # Sum the total area of wetlands in the Moku 
+    
+    wet_area <- rbind(wet_area, data.frame("Moku" = i, 
+                                           "Wetland Area (km2)" = wetl))
+    
+  }
+  
+}
+
+
+```
+```{r}
+write.csv(wet_area, "wetl_area.csv")
+```

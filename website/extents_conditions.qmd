@@ -137,7 +137,7 @@ The following figures summarize rainfall-linked terrestrial indicators, coral an
 
 ```{r}
 #| label: fig-condition-9
-#| fig-cap: "Mean monthly rainfall (mm) for (A) tree cover and (B) freshwater wetland ecosystem types across moku in the Main Hawaiian Islands, comparing 1990 reference conditions to 2013 and 2019 accounting periods. Moku are ranked from smallest to largest decline relative to the 1990 baseline."
+#| fig-cap: "Mean monthly rainfall change (mm) relative to a 1990 baseline for (A) tree cover and (B) freshwater wetland ecosystem types across moku in the Main Hawaiian Islands. Each bar is the mean of 2013 and 2019 baseline differences."
 #| fig-alt: "Two stacked panels showing rainfall change vs 1990 for tree cover and freshwater wetland extents by moku."
 knitr::include_graphics("../outputs/figs/conditions/fig09_rainfall_delta_baseline.png")
 ```
@@ -146,7 +146,7 @@ knitr::include_graphics("../outputs/figs/conditions/fig09_rainfall_delta_baselin
 
 ```{r}
 #| label: fig-condition-10
-#| fig-cap: "Maximum and mean monthly rainfall (mm) for (A) tree cover and (B) freshwater wetland ecosystem types across moku in the Main Hawaiian Islands (excluding Niʻihau, no data), comparing 1990 reference conditions to 2013 and 2019 accounting periods."
+#| fig-cap: "Maximum and mean monthly rainfall (mm) for tree cover and freshwater wetland ecosystem types across moku in the Main Hawaiian Islands (excluding Niʻihau, no data), comparing 1990 reference conditions to 2013 and 2019 accounting periods. Within each panel, moku are ordered by that metric's 1990 value."
 #| fig-alt: "Faceted bar charts of max and mean monthly rainfall for tree cover and freshwater wetland by moku and year."
 knitr::include_graphics("../outputs/figs/conditions/fig10_rainfall_2x2.png")
 ```
