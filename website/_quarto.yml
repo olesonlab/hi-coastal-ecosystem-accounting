@@ -13,6 +13,8 @@ website:
         text: "Extents & Conditions"
       - href: fisheries.qmd
         text: Fisheries
+      - href: natural_capital_economic_indicators.qmd
+        text: "Econ. indicators"
     right:
       - icon: github
         href: https://github.com/olesonlab

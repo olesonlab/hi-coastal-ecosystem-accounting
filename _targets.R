@@ -85,7 +85,10 @@ paths_in <- list(
   fisheries_prices        = "data/01_raw/fisheries_exchange_values/pricesMasterOGYEARS.xlsx",
   fisheries_costs         = "data/01_raw/fisheries_exchange_values/costs_other_perlb.csv",
   fisheries_wages         = "data/01_raw/fisheries_exchange_values/county_wages.csv",
-  fisheries_trace         = "data/01_raw/fisheries_exchange_values/trace_raw.xlsx"
+  fisheries_trace         = "data/01_raw/fisheries_exchange_values/trace_raw.xlsx",
+
+  # Natural capital / economic context (BEA county GDP quantity indexes)
+  bea_hi_county_gdp_cagdp8 = "data/01_raw/natural_capital_economic_indicators/bea_hi_county_gdp_private_gov_2001_2018_cagdp8.xlsx"
 )
 
 # Output paths
@@ -104,7 +107,9 @@ paths_out <- list(
   fisheries_master      = "data/02_interim/fisheries_exchange_values/ev_master_finale_rebuilt.xlsx",
   fisheries_comm_csv    = "data/03_processed/fisheries_exchange_values/comm_ev.csv",
   fisheries_noncomm_csv = "data/03_processed/fisheries_exchange_values/noncomm_ev.csv",
-  otp_moku_csv = "data/01_raw/conditions/prepared/otp_moku_zonal_mean.csv"
+  otp_moku_csv = "data/01_raw/conditions/prepared/otp_moku_zonal_mean.csv",
+
+  bea_hi_county_gdp_processed = "data/03_processed/natural_capital_economic_indicators/bea_hi_county_gdp_private_gov_2001_2018_cagdp8_processed.csv"
 )
 
 # =============================================================================
@@ -381,6 +386,21 @@ list(
   ),
 
   # ---------------------------------------------------------------------------
+  # NATURAL CAPITAL / ECONOMIC INDICATORS (BEA CAGDP8)
+  # County-level real GDP quantity indexes: private industries vs government
+  # ---------------------------------------------------------------------------
+
+  tar_target(
+    natural_capital_economic_figs,
+    generate_natural_capital_economic_indicator_figs(
+      raw_xlsx = paths_in$bea_hi_county_gdp_cagdp8,
+      out_csv = paths_out$bea_hi_county_gdp_processed,
+      out_png = "outputs/figs/natural_capital_economic_indicators/fig35_bea_hi_county_gdp_private_government_lines.png"
+    ),
+    format = "file"
+  ),
+
+  # ---------------------------------------------------------------------------
   # QUARTO WEBSITE
   # Renders website/ after fisheries figures and CSVs are ready.
   # QMD source files are tracked so edits automatically invalidate this target.
@@ -389,6 +409,7 @@ list(
   tar_target(qmd_fisheries,    "website/fisheries.qmd",          format = "file"),
   tar_target(qmd_index,        "website/index.qmd",              format = "file"),
   tar_target(qmd_extents_cond, "website/extents_conditions.qmd", format = "file"),
+  tar_target(qmd_natural_capital, "website/natural_capital_economic_indicators.qmd", format = "file"),
 
   tar_target(
     website,
@@ -397,6 +418,7 @@ list(
         qmd_fisheries,
         qmd_index,
         qmd_extents_cond,
+        qmd_natural_capital,
         fisheries_figs,
         fisheries_spatial_maps,
         fisheries_ev_change_maps,
@@ -404,7 +426,8 @@ list(
         extents_spatial_map,
         extents_figs,
         conditions_figs,
-        export_otp_moku_zonal
+        export_otp_moku_zonal,
+        natural_capital_economic_figs
       )
       unlink("website/_site", recursive = TRUE, force = TRUE)
       quarto::quarto_render(input = "website")
@@ -428,7 +451,8 @@ list(
         export_extents_csv, export_extents_gpkg,
         export_conditions_csv, export_conditions_gpkg,
         export_otp_moku_zonal,
-        extents_figs, conditions_figs, fisheries_figs, export_fisheries_csv
+        extents_figs, conditions_figs, fisheries_figs, export_fisheries_csv,
+        natural_capital_economic_figs
       )
       quarto::quarto_render(input = "notebooks/pipeline_report.qmd")
       "notebooks/pipeline_report.html"
