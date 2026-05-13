@@ -4,9 +4,11 @@ Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SE
 
 ## Links
 
-- **[HCEA Extents and Conditions Dashboard Prototype](https://olesonlab-hcea-extents-and-conditions-dashboard.share.connect.posit.cloud)**
-- **[HCEA Fisheries Exchange Values Dashboard GitHub Repo](https://github.com/CTAHR-Dashboard/CTAHR-Dashboard)**
-  - **[Dashboard Prototype Demo Video](https://drive.google.com/file/d/1-YyCopTKhXcHii7TXUnpemuc2fOPesJN/view?usp=sharing)**
+<center>
+  <img width="1916" height="935" alt="image" src="https://github.com/user-attachments/assets/54325bb0-1fc5-45b2-916d-71515391f449" />
+</center>
+
+- **[HCEA Interactive Dashboard](https://ctahr-dashboard.pages.dev/)**
 - **[HCEA Project Website](https://olesonlab-hcea-project-website.share.connect.posit.cloud)**
 - **HCEA Recreation Account Resources**
   - [The economic impact of climate change on coral reef in the Main Hawaiian Islands project website](https://loweas.github.io/moku_cr/)
@@ -14,7 +16,6 @@ Natural capital accounts for the Main Hawaiian Islands (MHI) following the UN SE
 
 ## Repository contents
 
-- **Shiny dashboard** ([Rhino](https://appsilon.github.io/rhino/)): extent and condition views plus the fisheries exchange value account, from processed outputs in `data/`.
 - **Data pipeline**: [`targets`](https://books.ropensci.org/targets/) in `_targets.R`, R helpers in `R/`.
 - **Quarto project website**: source in `website/` (documentation-style pages; may be deployed separately).
 
@@ -28,7 +29,6 @@ cd hi-coastal-ecosystem-accounting
 
 Rscript -e "renv::restore()"
 Rscript -e "targets::tar_make()"   # rebuild processed data (optional if data is present)
-Rscript -e "rhino::app()"          # run dashboard locally
 ```
 
 Requires **R 4.5+** (see `renv.lock`). Large raw inputs live under `data/01_raw/`; not every path may be public. See [documentation/](documentation/).
